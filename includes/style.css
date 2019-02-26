@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0b7dda;
+  color: white;
+  text-align: center;
+}
+
+
+h1 { text-align: center;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+} h3 { font-family: Papyrus, fantasy;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px; }
+/*p { font-family: Papyrus, fantasy; */
+  /*font-size: 14px;*/
+  /*font-style: normal;*/
+  /*font-variant: normal;*/
+  /*font-weight: 400;*/
+  /*line-height: 20px; }*/
+blockquote {
+  font-family: Papyrus, fantasy;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px; }
+pre { font-family: Papyrus, fantasy;
+  font-size: 13px; font-style: normal;
+  font-variant: normal; font-weight: 400;
+  line-height: 18.5714px; }
+
+.rendered_links_and_text {
+  margin-left: 20px;
+  padding-top: 20px;
+  display: block;
+  position: relative;
+}
+
+
+.rendered_links {
+  /*margin-left: 20px;*/
+  /*padding-top: 20px;*/
+  /*display: block;*/
+}
+
+
+
+.rendered_links:link {
+  text-decoration: underline;
+}
+
+.rendered_links:visited {
+  text-decoration: none;
+}
+
+.rendered_links:hover {
+  text-decoration: underline;
+}
+
+.rendered_links:active {
+  text-decoration: underline;
+}
+
+.st {
+    line-height: 1.4;
+    word-wrap: break-word;
+    color: grey;
+    font-size: 14px;
+    width: 400px;
+}
