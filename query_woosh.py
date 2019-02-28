@@ -17,5 +17,6 @@ def find_woosh():
     with ix.searcher() as s:
         results = s.search(q)
         for i in results:
+            print("test")
             print(i['title'])
             print(i['textdata'])
