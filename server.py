@@ -8,7 +8,9 @@ import os
 
 from indexer import cleaning2, index_file
 from query_logic import process_query
+from query_woosh import find_woosh
 from spider import run_spider
+from woosh_indexer import index_woosh
 
 hostName = "localhost"
 hostPort = 9000
@@ -210,8 +212,8 @@ try:
     # incoming request
     server = HTTPServer((hostName, hostPort), myHandler)
 
-
-
+    index_woosh()
+    find_woosh()
 
     # run_spider()                                              #spider and indexer
     # index_file()
