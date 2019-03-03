@@ -164,7 +164,7 @@ class myHandler(BaseHTTPRequestHandler):
                     arr = []
                     print(docs_path + file_name)
                     decoded_string = ""
-                    with open(docs_path + "/" + file_name, 'rb') as f:
+                    with open(os.path.join(docs_path, file_name), 'rb') as f:
                         contents = f.read()
                         decoded_string = contents.decode("utf-8", "replace")
 

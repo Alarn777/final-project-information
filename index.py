@@ -1,9 +1,7 @@
-import argparse
-import os
-import sys
-import helpers
 import os
 import shutil
+
+import helpers
 
 
 def do_index():
@@ -15,7 +13,7 @@ def do_index():
     files_detected = True
     for doc_file in os.listdir(source_path):
         # os.rename(source_path + "/" + doc_file, docs_path + "/" + doc_file)
-        shutil.move(source_path + "/" + doc_file, docs_path + "/" + doc_file)
+        shutil.move(os.path.join(source_path, doc_file), os.path.join(docs_path, doc_file))
         files_detected = True
         print('New files detected!')
 

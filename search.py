@@ -139,7 +139,7 @@ def load_result(token, inverted_index):
     cleaned_res = {''}
     cleaned_res.pop()
     for val in result:
-        val = val.replace("/Users/michaelrokitko/PycharmProjects/final-project-information/docs/", "")
+        val = os.path.basename(val)
         cleaned_res.add(val)
 
     return cleaned_res
