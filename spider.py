@@ -8,7 +8,6 @@ from scrapy.selector import Selector
 from scrapy.spiders import CrawlSpider
 from twisted.internet import reactor, defer
 
-from indexer import index_file, is_ascii
 
 DOMAIN = 'en.wikipedia.org'
 # DOMAIN = "scholar.google.com"
@@ -114,6 +113,7 @@ def run_spider():
     crawl()
     reactor.run()
 
-    index_file()
 
 # the script will block here until the last crawl call is finished
+def is_ascii(s):
+    return all(ord(c) < 128 for c in s)

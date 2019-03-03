@@ -1,19 +1,9 @@
 #!/usr/bin/python
-import re
-import nltk
-import sys
-import getopt
-import codecs
-import struct
-import math
-import io
 import collections
 import timeit
 import os
-import re
-import argparse
 import pickle
-
+import json
 
 RECORD_TIME = False  # toggling for recording the time taken for indexer
 BYTE_SIZE = 4  # docID is in int
@@ -35,22 +25,20 @@ def search(query):
     # open files
     inverted_index_file = os.path.join(
         os.getcwd(), 'data', 'inverted_index.pickle')
-
     with open(inverted_index_file, mode='rb') as f:
         inverted_index = pickle.load(f)
 
     # load dictionary to memory
     dictionary = inverted_index.keys()
 
-
     # process query
-
     result = process_query(query, dictionary, inverted_index)
     print(result)
 
-    RECORDED_TIME = start - timeit.default_timer()  # stop time
-
+    # stop time
+    RECORDED_TIME = timeit.default_timer() - start
     return result, RECORDED_TIME
+
 
 """
 returns the list of docIDs in the result for the given query
@@ -62,7 +50,6 @@ params:
 
 
 def process_query(query, dictionary, inverted_index):
-    stemmer = nltk.stem.porter.PorterStemmer()  # instantiate stemmer
     # prepare query list
     query = query.replace('(', '( ')
     query = query.replace(')', ' )')
@@ -76,9 +63,9 @@ def process_query(query, dictionary, inverted_index):
         result = []  # the evaluated result at each stage
         # if operand, add postings list for term to results stack
         if token != 'AND' and token != 'OR' and token != 'NOT':
-            # token = stemmer.stem(token)  # stem the token
             # default empty list if not in dictionary
-            if token in dictionary:
+
+            if token.replace("%22", "") in dictionary:
                 result = load_result(token, inverted_index)
 
         # else if AND operator
@@ -119,26 +106,43 @@ params:
     offset:     byte offset which acts as pointer to start of posting list in postings file
 """
 
-#
-# def load_posting_list(post_file, length, offset):
-#     post_file.seek(offset)
-#     posting_list = []
-#     for i in range(length):
-#         posting = post_file.read(BYTE_SIZE)
-#         docID = struct.unpack('I', posting)[0]
-#         posting_list.append(docID)
-#     return posting_list
-
 
 def load_result(token, inverted_index):
+    # open stop words and check
+    data_path = os.path.abspath("./data")
+    with open(data_path + "/" + "stopwords.json", 'r') as f:
+        stopwords = json.load(f)
+
     result = None
 
-    if result is None:
-        result = inverted_index.get(token)
-    else:
-        result.intersection_update(inverted_index.get(token))
+    if token.replace("%22", "") not in stopwords["values"]:
+        if result is None:
+            result = inverted_index.get(token)
+        else:
+            result.intersection_update(inverted_index.get(token))
 
-    return result
+    elif token.replace("%22", "") in stopwords["values"] and "%22" in token:
+        token = token.replace("%22", "")
+        if result is None:
+            result = inverted_index.get(token)
+        else:
+            result.intersection_update(inverted_index.get(token))
+    else:
+        return []
+
+    # if result is None:
+    #     result = inverted_index.get(token)
+    # else:
+    #     result.intersection_update(inverted_index.get(token))
+
+    # clean up results
+    cleaned_res = {''}
+    cleaned_res.pop()
+    for val in result:
+        val = val.replace("/Users/michaelrokitko/PycharmProjects/final-project-information/docs/", "")
+        cleaned_res.add(val)
+
+    return cleaned_res
 
 
 """
@@ -227,6 +231,12 @@ params:
 
 
 def boolean_OR(left_operand, right_operand):
+    # case if one of the operands are []
+    if not left_operand:
+        return right_operand
+    if not right_operand:
+        return right_operand
+
     result = []  # union of left and right operand
     result = left_operand | right_operand
     return result
@@ -241,6 +251,12 @@ params:
 
 
 def boolean_AND(left_operand, right_operand):
+    # case if one of the operands are []
+    if not left_operand:
+        return []
+    if not right_operand:
+        return []
+
     # perform 'merge'
     result = []  # results list to be returned
     result = left_operand & right_operand
@@ -250,11 +266,5 @@ def boolean_AND(left_operand, right_operand):
 """
 prints the proper command usage
 """
-
-# if (RECORD_TIME): start = timeit.default_timer()  # start time
-# search(dictionary_file, postings_file, queries_file, output_file)  # call the search engine on queries
-# if (RECORD_TIME): stop = timeit.default_timer()  # stop time
-# if (RECORD_TIME): print('Querying time:' + str(stop - start))  # print time taken
-
-
-search("commune AND (NOT parents OR department)")
+#
+# search("hello AND ( bla           OR           bla)          ")

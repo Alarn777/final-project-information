@@ -6,8 +6,7 @@ import sys
 from nltk.corpus import stopwords
 import nltk
 import ssl
-
-
+import acive_passive_files
 
 def assert_dir(path):
     if not os.path.exists(path):
@@ -42,44 +41,35 @@ def get_words_from_text(text):
     stop_words = set(stopwords.words('english'))
 
     processed_text = preprocess_text(text)
-    words = {w for w in processed_text.split() if w not in stop_words}
+    # words = {w for w in processed_text.split() if w not in stop_words}                                            changed!
+
+    words = {w for w in processed_text.split()}
 
     return words
 
 
 def build_inverted_index(docs_path):
     inverted_index = {}
-
+    Checker = acive_passive_files.ActivePassive
     for doc_file in os.listdir(docs_path):
-        filename = os.path.join(docs_path, doc_file)
-        text = get_text_from_file(filename)
-        words = get_words_from_text(text)
+        # check if doc_file is active
+        if Checker.check_if_active(doc_file):
+            filename = os.path.join(docs_path, doc_file)
+            text = get_text_from_file(filename)
+            words = get_words_from_text(text)
 
-        for word in words:
-            if inverted_index.get(word, None) is None:
-                inverted_index[word] = {filename}
-            else:
-                inverted_index[word].add(filename)
+            for word in words:
+                if inverted_index.get(word, None) is None:
+                    inverted_index[word] = {filename}
+                else:
+                    inverted_index[word].add(filename)
 
     return inverted_index
 
 
 def index(docs_path, data_path):
-    # try:
-    #     _create_unverified_https_context = ssl._create_unverified_context
-    # except AttributeError:
-    #     pass
-    # else:
-    #     ssl._create_default_https_context = _create_unverified_https_context
-    #
-    # nltk.download()
-
-
-
-
-
-
-
+    # initial activation of all files
+    acive_passive_files.ActivePassive.initial_activation()
 
     inverted_index = build_inverted_index(docs_path)
     dic_file = os.path.join(data_path, 'dictionary.txt')

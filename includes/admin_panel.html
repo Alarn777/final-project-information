@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1>Welcome to Admin panel</h1>
+
+<form style="float: right" action="/send">
+    <input style="margin: 10px" type="submit" value="Go to search" />
+</form>
+<div style="clear: both"></div>
+<form class="example" action="/command">
+  <input type="text" placeholder="Enter command..." name="execute">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<form style="float: right" action="/command">
+    <input style="margin: 10px"
+           type="hidden"
+           name="execute"
+           value="forceindex" />
+    <input style="margin: 10px" type="submit"
+            value="Force Reindex">
+
+</form>
+<h2> All files:</h2>
+
+<div class="footer">
+  <p>All rights reserved ®</p>
+</div>
+</body>
+</html>
