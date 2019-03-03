@@ -1,37 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="637988ed-e2b7-4682-958f-73e5d11fe25e" name="Default Changelist" comment="test">
-      <change afterPath="$PROJECT_DIR$/docs/0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/9.txt" afterDir="false" />
+    <list default="true" id="637988ed-e2b7-4682-958f-73e5d11fe25e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/active_passive_list.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/active_passive_list.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dictionary.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/inverted_index.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/data/inverted_index.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexdir/MAIN_WRITELOCK" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexdir/MAIN_kpsik6mpeq0lglya.seg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexdir/_MAIN_1.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/admin_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/admin_panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,29 +18,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/final_project_information$article_crawler.coverage" NAME="article_crawler Coverage Results" MODIFIED="1546103123906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
-    <SUITE FILE_PATH="coverage/final_project_information$Server.coverage" NAME="Server Coverage Results" MODIFIED="1551386665562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$article_crawler.coverage" NAME="article_crawler Coverage Results" MODIFIED="1551629118338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
+    <SUITE FILE_PATH="coverage/final_project_information$New_spider.coverage" NAME="New spider Coverage Results" MODIFIED="1551630217740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$Server.coverage" NAME="Server Coverage Results" MODIFIED="1551631805150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_project_information$Unnamed.coverage" NAME="Server Coverage Results" MODIFIED="1546172503214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/final_project_information$Search_boolean.coverage" NAME="Search boolean Coverage Results" MODIFIED="1551533488598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/final_project_information$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1546103092564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
+    <SUITE FILE_PATH="coverage/final_project_information$Search_boolean.coverage" NAME="Search boolean Coverage Results" MODIFIED="1551544558554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1551628921846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
     <SUITE FILE_PATH="coverage/final_project_information$Threads.coverage" NAME="Threads Coverage Results" MODIFIED="1546112112255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
     <SUITE FILE_PATH="coverage/final_project_information$Query_New.coverage" NAME="Query New Coverage Results" MODIFIED="1551528433944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/final_project_information$Index_New.coverage" NAME="Index New Coverage Results" MODIFIED="1551528714072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$active_passive.coverage" NAME="active_passive Coverage Results" MODIFIED="1551541687125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$Index_New.coverage" NAME="Index New Coverage Results" MODIFIED="1551544564644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="496018701">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -73,24 +53,24 @@
           <entry key="cfg" value="1" />
           <entry key="css" value="7" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="9" />
+          <entry key="html" value="14" />
           <entry key="ico" value="2" />
-          <entry key="json" value="23" />
+          <entry key="json" value="38" />
           <entry key="md" value="3" />
-          <entry key="py" value="146" />
-          <entry key="txt" value="54" />
+          <entry key="py" value="197" />
+          <entry key="txt" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="HTML" value="9" />
+          <entry key="HTML" value="14" />
           <entry key="Image" value="2" />
           <entry key="Ini" value="1" />
-          <entry key="JSON" value="23" />
+          <entry key="JSON" value="38" />
           <entry key="Markdown" value="3" />
-          <entry key="PLAIN_TEXT" value="63" />
-          <entry key="Python" value="143" />
+          <entry key="PLAIN_TEXT" value="72" />
+          <entry key="Python" value="194" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -99,19 +79,19 @@
           <entry key="css" value="290" />
           <entry key="dummy" value="4" />
           <entry key="gitignore" value="41" />
-          <entry key="html" value="110" />
-          <entry key="json" value="34" />
-          <entry key="py" value="9265" />
-          <entry key="txt" value="23" />
+          <entry key="html" value="440" />
+          <entry key="json" value="68" />
+          <entry key="py" value="14534" />
+          <entry key="txt" value="127" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="290" />
-          <entry key="HTML" value="110" />
-          <entry key="JSON" value="34" />
-          <entry key="PLAIN_TEXT" value="78" />
-          <entry key="Python" value="9265" />
+          <entry key="HTML" value="440" />
+          <entry key="JSON" value="68" />
+          <entry key="PLAIN_TEXT" value="182" />
+          <entry key="Python" value="14534" />
         </counts>
       </usages-collector>
     </session>
@@ -119,13 +99,60 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/search.py">
+        <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="122">
+              <caret line="193" column="53" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
               <folding>
-                <element signature="e#18#27#0" expanded="true" />
-                <marker date="1551534391515" expanded="true" signature="4102:4281" ph="..." />
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1551631803689" expanded="true" signature="1156:1157" ph="..." />
+                <marker date="1551631803689" expanded="true" signature="8121:8137" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1551565787139" expanded="true" signature="93:94" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-863">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1551630780520" expanded="true" signature="3494:3499" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/admin_panel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,43 +165,43 @@
       <list>
         <option value="CSS File" />
         <option value="package.json" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>find_all</find>
+      <find>inverted_index</find>
+      <find>index</find>
+      <find>index_file</find>
+      <find>is_ascii</find>
+      <find>cleaning2</find>
+      <find>seashell</find>
+      <find>line</find>
+      <find>query</find>
+      <find>stop</find>
+      <find>but</find>
+      <find>my</find>
+      <find>stopwords</find>
+      <find>stop_words</find>
+      <find>at</find>
+      <find>witj</find>
+      <find>load_result</find>
+      <find>replace</find>
+      <find>query_time</find>
+      <find>fo</find>
       <find>json</find>
-      <find>HtmlXPathSelector</find>
-      <find>Engli</find>
-      <find>url</find>
-      <find>print</find>
-      <find>Main_Page</find>
-      <find>datastore</find>
-      <find>Found</find>
-      <find>IOError</find>
-      <find>for file</find>
-      <find>txt</find>
-      <find>finalFile</find>
-      <find>have_parameters</find>
-      <find>HTTPServer</find>
-      <find>myHandler</find>
-      <find>self</find>
-      <find>search_array</find>
-      <find>human rights</find>
-      <find>queries_file</find>
-      <find>query_file</find>
-      <find>dict_file</find>
-      <find>load_dictionary</find>
-      <find>indexed_docIDs</find>
-      <find>search(dictionary_file, postings_file, queries_file, output_file)</find>
-      <find>process_query</find>
-      <find>load_posting_list</find>
-      <find>post_file</find>
-      <find>boolean_NOT</find>
-      <find>BYTE_SIZE</find>
+      <find>list_of_files = json.load(f)</find>
+      <find>ActivePassive</find>
+      <find>acive_passive_files</find>
+      <find>MAX_URLS_TO_CRAWL</find>
+      <find>ALL_URLs</find>
+      <find>0</find>
+      <find>find_all</find>
+      <find>with</find>
+      <find>send</find>
+      <find>/send</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,23 +231,29 @@
         <option value="$PROJECT_DIR$/Spider/test.py" />
         <option value="$PROJECT_DIR$/bla.html" />
         <option value="$PROJECT_DIR$/Spider/spider_new.py" />
-        <option value="$PROJECT_DIR$/Spider/article_spider.py" />
         <option value="$PROJECT_DIR$/Spider/spider.py" />
         <option value="$PROJECT_DIR$/Spider/multi-threaded-spider.py" />
         <option value="$PROJECT_DIR$/multi-threaded-spider.py" />
-        <option value="$PROJECT_DIR$/includes/index.html" />
-        <option value="$PROJECT_DIR$/spider.py" />
         <option value="$PROJECT_DIR$/indexer.py" />
-        <option value="$PROJECT_DIR$/query_logic.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/corpus/0.txt" />
         <option value="$PROJECT_DIR$/query_woosh.py" />
         <option value="$PROJECT_DIR$/woosh_indexer.py" />
+        <option value="$PROJECT_DIR$/query.py" />
+        <option value="$PROJECT_DIR$/docs/test.txt" />
+        <option value="$PROJECT_DIR$/data/active_passive_list.json" />
+        <option value="$PROJECT_DIR$/query_logic.py" />
+        <option value="$PROJECT_DIR$/data/stopwords.txt" />
+        <option value="$PROJECT_DIR$/data/stopwords.json" />
+        <option value="$PROJECT_DIR$/search.py" />
+        <option value="$PROJECT_DIR$/includes/index.html" />
         <option value="$PROJECT_DIR$/index.py" />
         <option value="$PROJECT_DIR$/helpers.py" />
-        <option value="$PROJECT_DIR$/query.py" />
-        <option value="$PROJECT_DIR$/search.py" />
+        <option value="$PROJECT_DIR$/acive_passive_files.py" />
+        <option value="$PROJECT_DIR$/Spider/article_spider.py" />
+        <option value="$PROJECT_DIR$/spider.py" />
+        <option value="$PROJECT_DIR$/includes/admin_panel.html" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
@@ -230,7 +263,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
@@ -268,12 +301,13 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/source" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Spider" />
       <recent name="$PROJECT_DIR$/includes" />
-      <recent name="$PROJECT_DIR$/includes/favicon.ico" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source" />
       <recent name="$PROJECT_DIR$/files" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -290,7 +324,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Search boolean">
+  <component name="RunManager" selected="Python.Server">
     <configuration name="Crawler" type="PythonConfigurationType" factoryName="Python">
       <module name="final-project-information" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -327,6 +361,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/index.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="New spider" type="PythonConfigurationType" factoryName="Python">
+      <module name="final-project-information" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -445,6 +501,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="active_passive" type="PythonConfigurationType" factoryName="Python">
+      <module name="final-project-information" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/acive_passive_files.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="article_crawler" type="PythonConfigurationType" factoryName="Python">
       <module name="final-project-information" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -469,6 +547,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.Search boolean" />
+      <item itemvalue="Python.New spider" />
+      <item itemvalue="Python.active_passive" />
       <item itemvalue="Python.Index New" />
       <item itemvalue="Python.Query New" />
       <item itemvalue="Python.Server" />
@@ -502,7 +582,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551455038709</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test">
+      <created>1551534643071</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551534643071</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Search implemented&#10;Basic Admin panel implemented">
+      <created>1551589668994</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551589668995</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -515,16 +609,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1280" height="727" extended-state="0" />
+    <frame x="-1" y="23" width="1280" height="727" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13570274" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13731825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3559055" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3952756" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3952756" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913387" />
@@ -542,22 +636,22 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17447495" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13570274" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19370079" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27150258" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3559055" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3952756" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32913387" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32913387" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32953367" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32755905" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32913387" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32913387" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -577,7 +671,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Search implemented&#10;Basic Admin panel implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search implemented&#10;Basic Admin panel implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -598,16 +693,6 @@
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Spider/article_spider.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Spider/spider.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Spider/multi-threaded-spider.py</url>
           <line>133</line>
           <option name="timeStamp" value="92" />
@@ -618,49 +703,14 @@
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/spider.py</url>
-          <line>116</line>
-          <option name="timeStamp" value="106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/server.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/server.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/query_logic.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/query_logic.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/query_logic.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/query.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="149" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/query.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="150" />
+          <url>file://$PROJECT_DIR$/search.py</url>
+          <line>216</line>
+          <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/search.py</url>
-          <line>212</line>
-          <option name="timeStamp" value="155" />
+          <line>269</line>
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -675,47 +725,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/indexes/.DS_S.json" />
-    <entry file="file://$PROJECT_DIR$/indexes/16th_century.json" />
-    <entry file="file://$PROJECT_DIR$/includes/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indexes/_(magazine).json" />
-    <entry file="file://$PROJECT_DIR$/indexes/Portal:Grateful_Dead.json" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="292" selection-start-line="292" selection-end-line="292" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui.py" />
-    <entry file="file://$PROJECT_DIR$/indexes/Empiricism.json" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/twisted/internet/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="901" selection-start-line="901" selection-end-line="901" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/twisted/internet/defer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="459" selection-start-line="459" selection-end-line="459" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/files/_(Adelaide).txt" />
     <entry file="file://$PROJECT_DIR$/files/A_Day_in_the_Life.txt" />
     <entry file="file://$PROJECT_DIR$/files/A_Message_to_Your_Heart.txt" />
@@ -742,13 +751,6 @@
     <entry file="file://$PROJECT_DIR$/files/Urakami.txt" />
     <entry file="file://$PROJECT_DIR$/files/1st_Fleet_(Imperial_Japanese_Navy).txt" />
     <entry file="file://$PROJECT_DIR$/indexes/1_November_1944_reconnaissance_sortie_over_Japan.json" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="413" selection-start-line="413" selection-end-line="413" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -757,80 +759,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/files/'n_Beetje.txt" />
-    <entry file="file://$PROJECT_DIR$/query_logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1547387634519" expanded="true" signature="40:41" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/corpus/16.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/query_woosh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/woosh_indexer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/A Festival of Books.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Cloning Pets.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="113" column="9" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1546123550711" expanded="true" signature="3531:3536" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1551385047379" expanded="true" signature="928:937" ph="..." />
-            <marker date="1551385047379" expanded="true" signature="3076:3116" ph="..." />
-            <marker date="1551385047379" expanded="true" signature="4772:4788" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="462" selection-start-line="462" selection-end-line="462" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/query_woosh.py" />
+    <entry file="file://$PROJECT_DIR$/settings.py" />
+    <entry file="file://$PROJECT_DIR$/woosh_indexer.py" />
+    <entry file="file://$PROJECT_DIR$/source/A Festival of Books.txt" />
+    <entry file="file://$PROJECT_DIR$/source/Cloning Pets.txt" />
     <entry file="file://$PROJECT_DIR$/corpus/0.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -845,21 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17076" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indexer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -870,26 +791,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="323" selection-start-line="323" selection-end-line="323" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/0.txt" />
     <entry file="file://$PROJECT_DIR$/corpus/19.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -904,34 +806,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.py">
+    <entry file="file://$PROJECT_DIR$/source/test.txt" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="247">
+          <caret line="311" column="17" lean-forward="true" selection-start-line="311" selection-start-column="17" selection-end-line="311" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/query.py">
+    <entry file="file://$PROJECT_DIR$/indexer.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
-          <caret line="95" column="4" lean-forward="true" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1551527083087" expanded="true" signature="1950:1955" ph="..." />
-          </folding>
+        <state relative-caret-position="307">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25670">
+          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query_logic.py" />
+    <entry file="file://$PROJECT_DIR$/data/active_passive_list.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="619" lean-forward="true" selection-start-column="619" selection-end-column="619" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="409" column="47" lean-forward="true" selection-start-line="409" selection-start-column="47" selection-end-line="409" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/stopwords.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-363">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
-            <element signature="e#18#27#0" expanded="true" />
-            <marker date="1551534391515" expanded="true" signature="4102:4281" ph="..." />
+            <element signature="e#18#36#0" expanded="true" />
+            <marker date="1551580454020" expanded="true" signature="3584:4685" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/acive_passive_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1551589433862" expanded="true" signature="123:124" ph="..." />
+            <marker date="1551589433862" expanded="true" signature="171:172" ph="..." />
+            <marker date="1551589433862" expanded="true" signature="1161:1170" ph="..." />
+            <marker date="1551589433862" expanded="true" signature="1613:1622" ph="..." />
+            <marker date="1551589433862" expanded="true" signature="2403:2412" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spider/files/50_State_Quarters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spider/article_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="43" selection-start-line="43" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spider/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-863">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1551630780520" expanded="true" signature="3494:3499" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/admin_panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1551565787139" expanded="true" signature="93:94" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="193" column="53" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1551631803689" expanded="true" signature="1156:1157" ph="..." />
+            <marker date="1551631803689" expanded="true" signature="8121:8137" ph="..." />
           </folding>
         </state>
       </provider>

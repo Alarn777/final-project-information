@@ -14,7 +14,7 @@ DOMAIN = 'en.wikipedia.org'
 URL = 'https://%s' % DOMAIN
 
 ALL_URLs = []
-MAX_URLS_TO_CRAWL = 100000
+MAX_URLS_TO_CRAWL = 100
 
 
 def find_all(a_str, sub):
@@ -41,7 +41,7 @@ class ArticleSpider(CrawlSpider):
         if is_ascii(name):
             if title:
                 try:
-                    f = open(curdir + "/files/" + name + '.txt', 'wb')
+                    f = open(curdir + "/Spider/files/" + name + '.txt', 'wb')
                     for line in array_of_texts:
                         f.write(line.encode("utf-8"))
                         f.write("\n".encode("utf-8"))
@@ -117,3 +117,6 @@ def run_spider():
 # the script will block here until the last crawl call is finished
 def is_ascii(s):
     return all(ord(c) < 128 for c in s)
+
+
+

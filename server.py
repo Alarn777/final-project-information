@@ -1,4 +1,5 @@
 import json
+import sys
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
 import cgi
@@ -83,6 +84,15 @@ class myHandler(BaseHTTPRequestHandler):
             if command == 'forceindex':
                 do_index()
                 self.wfile.write('<p>Force index done</p>'.encode("utf-8"))
+
+            if command == 'crawl':
+                run_spider()
+                crawl_path = os.path.abspath("./Spider/files")
+                self.wfile.write('<h2>All files fetched by Crawler</h2>'.encode("utf-8"))
+                for doc_file in os.listdir(crawl_path):
+                    var = '<p>' + doc_file + '</p>'
+                    self.wfile.write(var.encode("utf-8"))
+                pass
 
             if command.startswith('deactivate'):
                 command = command[13:]

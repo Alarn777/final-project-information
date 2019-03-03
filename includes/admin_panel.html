@@ -13,10 +13,6 @@
     <input style="margin: 10px" type="submit" value="Go to search" />
 </form>
 <div style="clear: both"></div>
-<form class="example" action="/command">
-  <input type="text" placeholder="Enter command..." name="execute">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
 <form style="float: right" action="/command">
     <input style="margin: 10px"
            type="hidden"
@@ -24,8 +20,18 @@
            value="forceindex" />
     <input style="margin: 10px" type="submit"
             value="Force Reindex">
-
 </form>
+
+<form style="float: right" action="/command">
+    <input style="margin: 10px"
+           type="hidden"
+           name="execute"
+           value="crawl" />
+    <input style="margin: 10px" type="submit"
+            value="Crawl for up to 100 files">
+</form>
+
+
 <h2> All files:</h2>
 
 <div class="footer">
