@@ -58,6 +58,9 @@ def process_query(query, dictionary, inverted_index):
     results_stack = []
     postfix_queue = collections.deque(shunting_yard(query))  # get query in postfix notation as a queue
 
+    saved_queue = postfix_queue
+
+
     while postfix_queue:
         token = postfix_queue.popleft()
         result = []  # the evaluated result at each stage
@@ -95,7 +98,29 @@ def process_query(query, dictionary, inverted_index):
     # NOTE: at this point results_stack should only have one item and it is the final result
     if len(results_stack) != 1: print("ERROR: results_stack. Please check valid query")  # check for errors
 
-    return results_stack.pop()
+    res = results_stack.pop()
+
+
+    data_path = os.path.abspath("./data")
+    occurances_file = os.path.join(data_path, 'occurances_file.json')
+    with open(occurances_file, "r") as read_file:
+        occurances = json.load(read_file)
+        bad_tokens = ['AND', 'OR', 'NOT', '(', ')']
+
+        token_occurances = {}
+        for file in res:
+            token_occurances[file] = 0
+            token_count = occurances[file]
+            for token in query:
+                if token not in bad_tokens:
+                    for val in token_count:
+                        if token in val.keys():
+                            token_occurances[file] += val[token]
+
+        sorted_d = sorted((value, key) for (key, value) in token_occurances.items())
+        print(sorted_d)
+
+    return sorted_d
 
 
 """

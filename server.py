@@ -157,9 +157,14 @@ class myHandler(BaseHTTPRequestHandler):
             first_line = ""
             second_line = ""
 
-            for file_name in query_results:  # try to correct indexed values
-                # file_name = file_name[:-4]
-                # file_name = file_name + ".txt"
+
+            # for file_name in query_results:
+            listmy = {x for x in query_results[::-1]}
+                # try to correct indexed values
+
+            print(query_results.__len__())
+            for i in reversed(query_results):
+                file_name = i[1]
                 try:
                     arr = []
                     print(docs_path + file_name)
