@@ -1,16 +1,12 @@
 import json
-import sys
-import urllib
-from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
-import cgi
-from urllib.parse import unquote
-import re
-from json import JSONDecodeError
-from os import curdir, sep
 import os
-import search
+import re
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from os import curdir, sep
+from urllib.parse import unquote
+
 import active_passive_files
+import search
 from index import do_index, load_from_source
 from spider import run_spider
 
@@ -322,6 +318,8 @@ class myHandler(BaseHTTPRequestHandler):
                     self.wfile.write(f.read())
                     return
                 elif finalFile:
+                    self.wfile.write('<div class="container"><div class="row"><div class="col-12">'.encode("utf-8"))
+
                     file_path = self.path
                     file_path = file_path.replace("%20", " ")
                     f = open(docs_path + sep + file_path, 'rb')
@@ -342,7 +340,7 @@ class myHandler(BaseHTTPRequestHandler):
                             query = var[val]
 
                     saved_query_for_back_to_search = query[34:]
-                    saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%2B"," ")
+                    saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%2B", " ")
 
                     saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%28", "(")
                     saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%29", ")")
@@ -374,8 +372,10 @@ class myHandler(BaseHTTPRequestHandler):
 
                     # file name
                     file_path = file_path[1:]
-                    var = '<h3>' + file_path[:-4] + '</h3>'
+                    var = '<h1>' + file_path[:-4] + '</h1>'
                     self.wfile.write(var.encode("utf-8"))
+                    self.wfile.write('<p>'.encode("utf-8"))
+
                     cleaned_query_literals = {''}
                     cleaned_query_literals.pop()
                     for word in query_literals:
@@ -391,10 +391,10 @@ class myHandler(BaseHTTPRequestHandler):
                             word = word + " "
                             self.wfile.write(word.encode("utf-8"))
 
-                    # self.wfile.write(cleaned_string.encode("utf-8"))
-                    var = '<a class="my-button button2" href="http://localhost:9000/send?search=' + saved_query_for_back_to_search + '">Back to search<a>'
+                    self.wfile.write('</p>'.encode("utf-8"))
+                    var = '</div></div><div class="row align-items-end"><div class="col-2"><a class="btn btn-primary" href="http://localhost:9000/send?search=' + saved_query_for_back_to_search + '">Back to search<a></div></div>'
                     self.wfile.write(var.encode("utf-8"))
-                    # self.wfile.write('<p><a style={padding: 100px;} href="/">Back to main page</a></p>'.encode("utf-8"))
+                    self.wfile.write('</div>'.encode("utf-8"))
                     f.close()
                 else:
                     f = open(curdir + sep + self.path)

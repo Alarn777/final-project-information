@@ -1,17 +1,15 @@
-import re
+import string
+from os.path import curdir
 import string
 import unicodedata
 from os.path import curdir
+
 import scrapy
-from slugify import slugify
-
-
 from scrapy.crawler import CrawlerRunner
 from scrapy.exceptions import CloseSpider
 from scrapy.selector import Selector
 from scrapy.spiders import CrawlSpider
 from twisted.internet import reactor, defer
-import unicodedata
 
 DOMAIN = 'en.wikipedia.org'
 # DOMAIN = "scholar.google.com"

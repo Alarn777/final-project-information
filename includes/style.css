@@ -148,3 +148,7 @@ pre {
   background-color: #0b7dda;
   color: white;
 }
+
+.btn{
+  border-radius: 0;
+}
