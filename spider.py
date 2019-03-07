@@ -1,13 +1,17 @@
 import re
+import string
 import unicodedata
 from os.path import curdir
 import scrapy
+from slugify import slugify
+
+
 from scrapy.crawler import CrawlerRunner
 from scrapy.exceptions import CloseSpider
 from scrapy.selector import Selector
 from scrapy.spiders import CrawlSpider
 from twisted.internet import reactor, defer
-
+import unicodedata
 
 DOMAIN = 'en.wikipedia.org'
 # DOMAIN = "scholar.google.com"
@@ -29,18 +33,30 @@ def find_all(a_str, sub):
 class ArticleSpider(CrawlSpider):
     name = "article"
 
+    def removeDisallowedFilenameChars(self, filename):
+        validFilenameChars = "-_.() %s%s" % (string.ascii_letters, string.digits)
+        cleanedFilename = unicodedata.normalize('NFKD', filename).encode('ASCII', 'ignore')
+        return ''.join(c for c in cleanedFilename if c in validFilenameChars)
+
     def parse(self, response):
         array_of_texts = response.xpath('//p/text()').extract()
         title = response.xpath('//body/div[@class="mw-body"]/h1/text()').extract()       # for wikipedia
         name = "_".join(map(str, title))
         name = name.replace(" ", "_")
+        name = name.replace("/", "_")
+        validFilenameChars = "-_.() %s%s" % (string.ascii_letters, string.digits)
+        cleanedFilename = unicodedata.normalize('NFKD', name).encode('ASCII', 'ignore')
+        name = cleanedFilename.decode("utf-8")
+
         if is_ascii(name):
             if title:
                 try:
                     f = open(curdir + "/source/" + name + '.txt', 'wb')
                     for line in array_of_texts:
-                        f.write(line.encode("utf-8"))
-                        f.write("\n".encode("utf-8"))
+                        for char in line:
+                            if is_ascii(char):
+                                f.write(char.encode("utf-8"))
+                    f.write("\n".encode("utf-8"))
 
                     f.close()
                 except IOError:

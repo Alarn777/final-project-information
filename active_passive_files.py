@@ -15,6 +15,8 @@ class ActivePassive:
 
                 list_of_files = json.load(f)
                 for doc_file in os.listdir("docs"):
+                    if doc_file.startswith("."):
+                        continue
                     if doc_file in list_of_files.keys():
                         continue
                     else:
@@ -30,6 +32,8 @@ class ActivePassive:
         f = open(curdir + "/data/" + filename, 'w')
         index_file_json = {}
         for doc_file in os.listdir("docs"):
+            if doc_file.startswith("."):
+                continue
             index_file_json[doc_file] = True
         json.dump(index_file_json, f)
         f.close()

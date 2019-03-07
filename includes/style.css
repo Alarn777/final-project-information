@@ -44,6 +44,8 @@ form.example::after {
   background-color: #0b7dda;
   color: white;
   text-align: center;
+  opacity: 1;
+  z-index: 1000;
 }
 
 
@@ -54,7 +56,8 @@ h1 { text-align: center;
   font-variant: normal;
   font-weight: 700;
   line-height: 26.4px;
-} h3 { font-family: Papyrus, fantasy;
+} h3 {
+    /*font-family: Papyrus, fantasy;*/
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
@@ -67,13 +70,14 @@ h1 { text-align: center;
   /*font-weight: 400;*/
   /*line-height: 20px; }*/
 blockquote {
-  font-family: Papyrus, fantasy;
+  /*font-family: Papyrus, fantasy;*/
   font-size: 21px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
   line-height: 30px; }
-pre { font-family: Papyrus, fantasy;
+pre {
+  /*font-family: Papyrus, fantasy;*/
   font-size: 13px; font-style: normal;
   font-variant: normal; font-weight: 400;
   line-height: 18.5714px; }
@@ -91,8 +95,6 @@ pre { font-family: Papyrus, fantasy;
   /*padding-top: 20px;*/
   /*display: block;*/
 }
-
-
 
 .rendered_links:link {
   text-decoration: underline;
@@ -133,14 +135,16 @@ pre { font-family: Papyrus, fantasy;
   transition-duration: 0.4s;
   cursor: pointer;
 }
-
+.table-btn{
+  padding: 5px 10px;
+}
 .button2 {
   background-color: white;
   color: black;
-  border: 2px solid #008CBA;
+  border: 2px solid #0b7dda;
 }
 
 .button2:hover {
-  background-color: #008CBA;
+  background-color: #0b7dda;
   color: white;
 }

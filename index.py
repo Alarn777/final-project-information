@@ -12,6 +12,8 @@ def load_from_source():
     # move files from source to docs
     files_detected = True
     for doc_file in os.listdir(source_path):
+        if doc_file.startswith("."):
+            continue
         # os.rename(source_path + "/" + doc_file, docs_path + "/" + doc_file)
         shutil.move(os.path.join(source_path, doc_file), os.path.join(docs_path, doc_file))
         files_detected = True

@@ -60,7 +60,6 @@ def process_query(query, dictionary, inverted_index):
 
     saved_queue = postfix_queue
 
-
     while postfix_queue:
         token = postfix_queue.popleft()
         result = []  # the evaluated result at each stage
@@ -100,7 +99,6 @@ def process_query(query, dictionary, inverted_index):
 
     res = results_stack.pop()
 
-
     data_path = os.path.abspath("./data")
     occurances_file = os.path.join(data_path, 'occurances_file.json')
     with open(occurances_file, "r") as read_file:
@@ -109,15 +107,25 @@ def process_query(query, dictionary, inverted_index):
 
         token_occurances = {}
         for file in res:
+
             token_occurances[file] = 0
-            token_count = occurances[file]
+            try:
+                token_count = occurances[file]
+
+            except:
+                token_count = []
+
             for token in query:
                 if token not in bad_tokens:
                     for val in token_count:
                         if token in val.keys():
                             token_occurances[file] += val[token]
 
-        sorted_d = sorted((value, key) for (key, value) in token_occurances.items())
+        token_occurances_fixed = {}
+        for tuple in token_occurances:
+            token_occurances_fixed[os.path.basename(tuple)] = token_occurances[tuple]
+            pass
+        sorted_d = sorted((value, key) for (key, value) in token_occurances_fixed.items())
         print(sorted_d)
 
     return sorted_d
@@ -163,9 +171,10 @@ def load_result(token, inverted_index):
     # clean up results
     cleaned_res = {''}
     cleaned_res.pop()
-    for val in result:
-        val = os.path.basename(val)
-        cleaned_res.add(val)
+    if result:
+        for val in result:
+            val = os.path.basename(val)
+            cleaned_res.add(val)
 
     return cleaned_res
 
@@ -237,7 +246,7 @@ def boolean_NOT(right_operand, inverted_index):
     for word in inverted_index:
         res = inverted_index.get(word)
         for i in res:
-            U.add(i)
+            U.add(os.path.basename(i))
     # complement of an empty list is list of all indexed (U)
     if not right_operand:
         return U
@@ -260,7 +269,7 @@ def boolean_OR(left_operand, right_operand):
     if not left_operand:
         return right_operand
     if not right_operand:
-        return right_operand
+        return left_operand
 
     result = []  # union of left and right operand
     result = left_operand | right_operand

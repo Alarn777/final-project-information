@@ -1,14 +1,16 @@
 import json
 import sys
+import urllib
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
 import cgi
+from urllib.parse import unquote
 import re
 from json import JSONDecodeError
 from os import curdir, sep
 import os
 import search
-import acive_passive_files
+import active_passive_files
 from index import do_index, load_from_source
 from spider import run_spider
 
@@ -79,13 +81,13 @@ class myHandler(BaseHTTPRequestHandler):
 
             for file in list_of_files:
                 if list_of_files[file]:
-                    var = '<p style="color:green">' + file + ' status: Active</p>'
-                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="deactivate+' + file + '"/>' + '<input class="button-my button2" type="submit" value="Deactivate" />' + '</form>'
+                    var = '<span style="color:green">' + file + ' status: Active</span>'
+                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="deactivate+' + file + '"/>' + '<input class="button-my button2 table-btn" type="submit" value="Deactivate" />' + '</form>'
 
                     self.wfile.write(deactivate.encode("utf-8"))
                 else:
-                    var = '<p style="color:red">' + file + " status: Not Active</p>"
-                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="activate+' + file + '"/>' + '<input class="button-my button2" disabled type="submit" value="Deactivate" />' + '<input class="button-my button2" type="submit" value="Activate" />' + '</form>'
+                    var = '<span style="color:red">' + file + " status: Not Active</span>"
+                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="activate+' + file + '"/>' + '<input class="button-my button2  table-btn" disabled type="submit" value="Deactivate" />' + '<input class="button-my button2  table-btn" type="submit" value="Activate" />' + '</form>'
 
                     self.wfile.write(deactivate.encode("utf-8"))
             return
@@ -95,8 +97,12 @@ class myHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            f = open(curdir + sep + "/includes/admin_panel.html")
-            # self.wfile.write(f.read().encode("utf-8"))
+
+            # load template
+
+            f = open(curdir + sep + "/includes/all_data.html")
+            self.wfile.write(f.read().encode("utf-8"))
+
             command = self.path[17:]
             if command == 'forceindex':
                 do_index()
@@ -125,14 +131,14 @@ class myHandler(BaseHTTPRequestHandler):
             if command.startswith('deactivate'):
                 command = command[13:]
                 command = command.replace("+", " ")
-                acive_passive_files.ActivePassive.deactivate_file(command)
+                active_passive_files.ActivePassive.deactivate_file(command)
 
                 self.wfile.write('<p>Deactivated file</p>'.encode("utf-8"))
 
             if command.startswith('activate'):
                 command = command[11:]
                 command = command.replace("+", " ")
-                acive_passive_files.ActivePassive.activate_file(command)
+                active_passive_files.ActivePassive.activate_file(command)
 
                 self.wfile.write('<p>Activated file</p>'.encode("utf-8"))
 
@@ -171,23 +177,26 @@ class myHandler(BaseHTTPRequestHandler):
                 self.wfile.write(f.read().encode("utf-8"))
 
                 # render data
-                to_wright = '<h1 ="">No Results for searched "' + query + '"</h1>'
+                to_wright = '<h1>No Results for searched "' + unquote(query) + '"</h1>'
                 self.wfile.write(to_wright.encode("utf-8"))
                 return
 
             # results found
 
-
             # render page template
             f = open(curdir + sep + "/includes/index.html")
             self.wfile.write(f.read().encode("utf-8"))
+
+            # print query for user
+            var = '<h3>Searched for: ' + unquote(query)
+            self.wfile.write(var.encode("utf-8"))
 
             var = '<p>Search time: ' + str(query_time)
             self.wfile.write(var.encode("utf-8"))
             first_line = ""
             second_line = ""
 
-            #check for inactive files
+            # check for inactive files
 
             filename = "active_passive_list.json"
 
@@ -196,7 +205,7 @@ class myHandler(BaseHTTPRequestHandler):
                 if f:
                     list_of_files = json.load(f)
                     for doc_file in query_results:
-                        if list_of_files[doc_file[1]]:
+                        if list_of_files[os.path.basename(doc_file[1])]:
                             continue
                         else:
                             query_results.remove(doc_file)
@@ -205,10 +214,9 @@ class myHandler(BaseHTTPRequestHandler):
             except IOError:
                 print("Open file error")
 
-
             # for file_name in query_results:
             listmy = {x for x in query_results[::-1]}
-                # try to correct indexed values
+            # try to correct indexed values
 
             for i in reversed(query_results):
                 file_name = i[1]
@@ -243,7 +251,7 @@ class myHandler(BaseHTTPRequestHandler):
 
                 var = '"' + file_name + '"'
                 to_wright = '<div class ="rendered_links_and_text">' + '<a class="rendered_links" target="_blank" href=' + var + ">" + file_name[
-                                                                                                                       :-4] + "</a>"
+                                                                                                                                       :-4] + "</a>"
                 self.wfile.write(to_wright.encode("utf-8"))
                 self.wfile.write(first_line.encode("utf-8"))
                 # self.wfile.write(second_line.encode("wtf-8"))
@@ -292,20 +300,19 @@ class myHandler(BaseHTTPRequestHandler):
                 sendReply = True
 
             if sendReply:
-            #     if finalFile:
-            #         f = open(curdir + sep + self.path)
-            #         for line in f:
-            #             for word in line:
-            #                 if word == self.search_array[0]:
-            #                     to_post_to_file = '<b>' + self.search_array[0] + '</b>'
-            #                     self.wfile.write(to_post_to_file.encode("utf-8"))
-            #                 else:
-            #                     self.wfile.write(word.encode("utf-8"))
+                #     if finalFile:
+                #         f = open(curdir + sep + self.path)
+                #         for line in f:
+                #             for word in line:
+                #                 if word == self.search_array[0]:
+                #                     to_post_to_file = '<b>' + self.search_array[0] + '</b>'
+                #                     self.wfile.write(to_post_to_file.encode("utf-8"))
+                #                 else:
+                #                     self.wfile.write(word.encode("utf-8"))
 
-
-            #     self.wfile.write('<a style={padding: 100px;} href="/">Back to main page</a>'.encode("utf-8"))
-            #
-            # Open the static file requested and send it
+                #     self.wfile.write('<a style={padding: 100px;} href="/">Back to main page</a>'.encode("utf-8"))
+                #
+                # Open the static file requested and send it
                 self.send_response(200)
                 self.send_header('Content-type', mimetype)
                 self.end_headers()
@@ -334,6 +341,13 @@ class myHandler(BaseHTTPRequestHandler):
                         if val == "Referer":
                             query = var[val]
 
+                    saved_query_for_back_to_search = query[34:]
+                    saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%2B"," ")
+
+                    saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%28", "(")
+                    saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%29", ")")
+                    saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%22", '"')
+
                     query = query[34:]
                     search_params = query.replace("%28", "(")
                     search_params = search_params.replace("%29", ")")
@@ -345,13 +359,18 @@ class myHandler(BaseHTTPRequestHandler):
                     query = query[:-1]
 
                     query = query.replace("(", "")
-                    query = query.replace(")",  "")
+                    query = query.replace(")", "")
 
                     query = query.split(" ")
 
                     set_query = set(query)
                     query_literals = set_query - {"AND", "OR", "NOT", ")", "(", ""}
                     words = cleaned_string.split(" ")
+
+                    # load template
+
+                    f = open(curdir + sep + "/includes/all_data.html")
+                    self.wfile.write(f.read().encode("utf-8"))
 
                     # file name
                     file_path = file_path[1:]
@@ -366,15 +385,16 @@ class myHandler(BaseHTTPRequestHandler):
                     # file text
                     for word in words:
                         if self.cleaning2(word) in cleaned_query_literals:
-                            big_word = '<b><u>' + word + '</u></b>' + " "
+                            big_word = '<b><u style="background-color:yellow;">' + word + '</u></b>' + " "
                             self.wfile.write(big_word.encode("utf-8"))
                         else:
                             word = word + " "
                             self.wfile.write(word.encode("utf-8"))
 
-
                     # self.wfile.write(cleaned_string.encode("utf-8"))
-                    self.wfile.write('<p><a style={padding: 100px;} href="/">Back to main page</a></p>'.encode("utf-8"))
+                    var = '<a class="my-button button2" href="http://localhost:9000/send?search=' + saved_query_for_back_to_search + '">Back to search<a>'
+                    self.wfile.write(var.encode("utf-8"))
+                    # self.wfile.write('<p><a style={padding: 100px;} href="/">Back to main page</a></p>'.encode("utf-8"))
                     f.close()
                 else:
                     f = open(curdir + sep + self.path)
@@ -392,7 +412,6 @@ try:
 
     do_index()
 
-
     # run_spider()                                              #spider and indexer
     # index_file()
     # Wait forever for incoming http requests
@@ -403,5 +422,3 @@ try:
 except KeyboardInterrupt:
     print('^C received, shutting down the web server')
     server.socket.close()
-
-

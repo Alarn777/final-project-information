@@ -8,7 +8,7 @@ import sys
 from nltk.corpus import stopwords
 import nltk
 import ssl
-import acive_passive_files
+import active_passive_files
 
 
 def assert_dir(path):
@@ -62,12 +62,14 @@ def get_words_from_text(text):
 
 def build_inverted_index(docs_path):
     inverted_index = {}
-    Checker = acive_passive_files.ActivePassive
+    Checker = active_passive_files.ActivePassive
 
     json_dict = {
     }
 
     for doc_file in os.listdir(docs_path):
+        if doc_file.startswith("."):
+            continue
         # check if doc_file is active
         if Checker.check_if_active(doc_file):
             filename = os.path.join(docs_path, doc_file)
@@ -98,7 +100,7 @@ def build_inverted_index(docs_path):
 
 def index(docs_path, data_path):
     # initial activation of all files
-    acive_passive_files.ActivePassive.initial_activation()
+    active_passive_files.ActivePassive.initial_activation()
 
     inverted_index = build_inverted_index(docs_path)
     dic_file = os.path.join(data_path, 'dictionary.txt')
