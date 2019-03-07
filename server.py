@@ -111,6 +111,9 @@ class myHandler(BaseHTTPRequestHandler):
                 # Check what files in source
                 self.wfile.write('<h2>All files found in source folder:</h2>'.encode("utf-8"))
                 for doc_file in os.listdir(source_path):
+                    if doc_file.startswith("."):
+                        continue
+
                     var = '<p>' + doc_file + '</p>'
                     self.wfile.write(var.encode("utf-8"))
                 load_from_source()
@@ -118,9 +121,11 @@ class myHandler(BaseHTTPRequestHandler):
 
             if command == 'crawl':
                 run_spider()
-                crawl_path = os.path.abspath("./Spider/files")
+                crawl_path = os.path.abspath("./source")
                 self.wfile.write('<h2>All files fetched by Crawler</h2>'.encode("utf-8"))
                 for doc_file in os.listdir(crawl_path):
+                    if doc_file.startswith("."):
+                        continue
                     var = '<p>' + doc_file + '</p>'
                     self.wfile.write(var.encode("utf-8"))
 
@@ -140,6 +145,8 @@ class myHandler(BaseHTTPRequestHandler):
 
             back = '<form style="float: right; margin: 10px" action="/admin">' + '<input class="button-my button2" style="margin: 10px" type="submit" value="Back to Admin panel" />' + '</form>'
             self.wfile.write(back.encode("utf-8"))
+            self.wfile.write('<div style="clear:both"></div>'.encode("utf-8"))
+
             return
 
         if self.path.startswith("/send"):
@@ -184,11 +191,17 @@ class myHandler(BaseHTTPRequestHandler):
             self.wfile.write(f.read().encode("utf-8"))
 
             # print query for user
-            var = '<h3>Searched for: ' + unquote(query)
+
+            var = '<div class="data"><span>Searched for: ' + unquote(query) + '</span><br>'
             self.wfile.write(var.encode("utf-8"))
 
-            var = '<p>Search time: ' + str(query_time)
+            var = '<span>Search time: ' + str(query_time) + '</span><br>'
             self.wfile.write(var.encode("utf-8"))
+
+            var = '<span>Results: ' + str(query_results.__len__()) + '</span></div>'
+            self.wfile.write(var.encode("utf-8"))
+
+
             first_line = ""
             second_line = ""
 

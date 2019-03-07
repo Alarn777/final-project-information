@@ -2,56 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="637988ed-e2b7-4682-958f-73e5d11fe25e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/all_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acive_passive_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/active_passive_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/active_passive_list.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/active_passive_list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dictionary.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/inverted_index.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/data/inverted_index.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/occurances_file.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/occurances_file.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/A Festival of Books.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/A Murder-Suicide.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Better To Be Unlucky.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Cloning Pets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Crazy Housing Prices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Food Fight Erupted in Prison.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Freeway Chase Ends at Newsstand.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Gasoline Prices Hit Record High.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Happy and Unhappy Renters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Jerry Decided To Buy a Gun.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Man Injured at Fast Food Place.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Pulling Out Nine Tons of Trash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Rentals at the Oceanside Community.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Sara Went Shopping.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Trees Are a Threat.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/admin_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/admin_panel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/A Festival of Books.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/A Murder-Suicide.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Better To Be Unlucky.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Cloning Pets.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Crazy Housing Prices.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Food Fight Erupted in Prison.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Freeway Chase Ends at Newsstand.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Gasoline Prices Hit Record High.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Happy and Unhappy Renters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Jerry Decided To Buy a Gun.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Man Injured at Fast Food Place.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Pulling Out Nine Tons of Trash.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Rentals at the Oceanside Community.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Sara Went Shopping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Trees Are a Threat.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,117 +53,96 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/final_project_information$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1551628921846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
-    <SUITE FILE_PATH="coverage/final_project_information$New_spider.coverage" NAME="New spider Coverage Results" MODIFIED="1551630217740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/final_project_information$active_passive.coverage" NAME="active_passive Coverage Results" MODIFIED="1551541687125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/final_project_information$Server.coverage" NAME="Server Coverage Results" MODIFIED="1551974465504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_project_information$article_crawler.coverage" NAME="article_crawler Coverage Results" MODIFIED="1551629118338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
+    <SUITE FILE_PATH="coverage/final_project_information$New_spider.coverage" NAME="New spider Coverage Results" MODIFIED="1551630217740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$Server.coverage" NAME="Server Coverage Results" MODIFIED="1551989599565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_project_information$Unnamed.coverage" NAME="Server Coverage Results" MODIFIED="1546172503214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/final_project_information$Search_boolean.coverage" NAME="Search boolean Coverage Results" MODIFIED="1551544558554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/final_project_information$Index_New.coverage" NAME="Index New Coverage Results" MODIFIED="1551544564644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1551628921846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
     <SUITE FILE_PATH="coverage/final_project_information$Threads.coverage" NAME="Threads Coverage Results" MODIFIED="1546112112255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
     <SUITE FILE_PATH="coverage/final_project_information$Query_New.coverage" NAME="Query New Coverage Results" MODIFIED="1551528433944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$active_passive.coverage" NAME="active_passive Coverage Results" MODIFIED="1551541687125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project_information$Index_New.coverage" NAME="Index New Coverage Results" MODIFIED="1551544564644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="496018701">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Software" value="2" />
+          <entry key="Software1" value="2" />
+          <entry key="a" value="1" />
+          <entry key="cfg" value="1" />
+          <entry key="css" value="11" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="29" />
+          <entry key="ico" value="2" />
+          <entry key="json" value="51" />
+          <entry key="md" value="4" />
+          <entry key="py" value="251" />
+          <entry key="txt" value="80" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="11" />
+          <entry key="HTML" value="29" />
+          <entry key="Image" value="2" />
+          <entry key="Ini" value="1" />
+          <entry key="JSON" value="51" />
+          <entry key="Markdown" value="4" />
+          <entry key="PLAIN_TEXT" value="89" />
+          <entry key="Python" value="248" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Software1" value="10" />
+          <entry key="css" value="449" />
+          <entry key="dummy" value="5" />
+          <entry key="gitignore" value="41" />
+          <entry key="html" value="662" />
+          <entry key="json" value="70" />
+          <entry key="py" value="17976" />
+          <entry key="txt" value="429" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="449" />
+          <entry key="HTML" value="662" />
+          <entry key="JSON" value="70" />
+          <entry key="PLAIN_TEXT" value="485" />
+          <entry key="Python" value="17976" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/admin_panel.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#form#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#form#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="6" selection-start-line="6" selection-end-line="8" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="400" column="62" lean-forward="true" selection-start-line="400" selection-start-column="62" selection-end-line="400" selection-end-column="62" />
+            <state relative-caret-position="138">
+              <caret line="147" column="59" selection-start-line="147" selection-start-column="56" selection-end-line="147" selection-end-column="59" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/all_data.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="152" column="18" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -189,11 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>search</find>
-      <find>at</find>
-      <find>point</find>
-      <find>british</find>
-      <find>base</find>
       <find>admin</find>
       <find>activate</find>
       <find>execute</find>
@@ -214,11 +181,16 @@
       <find>/admin</find>
       <find>p</find>
       <find>ac</find>
-      <find>load</find>
       <find>command</find>
       <find>forcein</find>
       <find>saved_query_for_back_to_search</find>
-      <find>button2</find>
+      <find>Spide</find>
+      <find>Spider</find>
+      <find>Sou</find>
+      <find>craw</find>
+      <find>&lt;h3</find>
+      <find>h1</find>
+      <find>load</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -252,6 +224,7 @@
         <option value="$PROJECT_DIR$/Spider/multi-threaded-spider.py" />
         <option value="$PROJECT_DIR$/multi-threaded-spider.py" />
         <option value="$PROJECT_DIR$/indexer.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/corpus/0.txt" />
         <option value="$PROJECT_DIR$/query_woosh.py" />
         <option value="$PROJECT_DIR$/woosh_indexer.py" />
@@ -265,6 +238,7 @@
         <option value="$PROJECT_DIR$/Fix.txt" />
         <option value="$PROJECT_DIR$/docs/14.txt" />
         <option value="$PROJECT_DIR$/acive_passive_files.py" />
+        <option value="$PROJECT_DIR$/includes/login.html" />
         <option value="$PROJECT_DIR$/index.py" />
         <option value="$PROJECT_DIR$/search.py" />
         <option value="$PROJECT_DIR$/active_pasive_files.py" />
@@ -272,20 +246,24 @@
         <option value="$PROJECT_DIR$/active_passive_files.py" />
         <option value="$PROJECT_DIR$/helpers.py" />
         <option value="$PROJECT_DIR$/spider.py" />
-        <option value="$PROJECT_DIR$/includes/style.css" />
-        <option value="$PROJECT_DIR$/includes/admin_panel.html" />
-        <option value="$PROJECT_DIR$/includes/login.html" />
-        <option value="$PROJECT_DIR$/includes/index.html" />
         <option value="$PROJECT_DIR$/includes/all_data.html" />
+        <option value="$PROJECT_DIR$/includes/style.css" />
+        <option value="$PROJECT_DIR$/includes/index.html" />
+        <option value="$PROJECT_DIR$/includes/admin_panel.html" />
         <option value="$PROJECT_DIR$/server.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="24" />
     <option name="width" value="1280" />
-    <option name="height" value="728" />
+    <option name="height" value="727" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -293,6 +271,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,22 +279,25 @@
               <item name="final-project-information" type="b2602c69:ProjectViewProjectNode" />
               <item name="final-project-information" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="final-project-information" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final-project-information" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -461,9 +443,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -586,7 +568,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545699565209</updated>
-      <workItem from="1551973026138" duration="1477000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1551387537248</created>
@@ -640,9 +621,6 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1477000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -653,24 +631,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="0" y="24" width="1280" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49739584" visible="true" weight="0.1891348" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49739584" visible="true" weight="0.14216478" />
       <window_info id="Structure" order="1" sideWeight="0.5026042" side_tool="true" weight="0.14054927" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" weight="0.3550212" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.37057993" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3559055" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37165356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913387" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32913387" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033534" side_tool="true" weight="0.3550212" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32673267" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32755905" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32913387" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32913387" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -707,6 +685,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
@@ -715,6 +696,37 @@
     <MESSAGE value="Search implemented&#10;Basic Admin panel implemented" />
     <MESSAGE value="Search implemented&#10;Basic Admin panel implemented&#10;Ordered search implemented" />
     <option name="LAST_COMMIT_MESSAGE" value="Search implemented&#10;Basic Admin panel implemented&#10;Ordered search implemented" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Spider/page_spider.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Spider/spider.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Spider/article_spider.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Spider/multi-threaded-spider.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Spider/multi-threaded-spider.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -741,7 +753,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/whoosh/reading.py" />
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/whoosh/reading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="638" selection-start-line="638" selection-end-line="638" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/0.txt" />
     <entry file="file://$PROJECT_DIR$/corpus/19.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -757,9 +775,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="311" column="17" lean-forward="true" selection-start-line="311" selection-start-column="17" selection-end-line="311" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/indexer.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shutil.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/test.txt" />
     <entry file="file://$PROJECT_DIR$/query.py" />
     <entry file="file://$PROJECT_DIR$/query_logic.py" />
@@ -812,17 +842,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/acive_passive_files.py" />
-    <entry file="file://$PROJECT_DIR$/data/occurances_file.json" />
-    <entry file="file://$PROJECT_DIR$/data/dictionary.txt" />
-    <entry file="file://$PROJECT_DIR$/helpers.py">
+    <entry file="file://$PROJECT_DIR$/data/occurances_file.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dictionary.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/active_passive_files.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -834,23 +862,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Wikipedia:Recent_additions.txt" />
-    <entry file="file://$PROJECT_DIR$/data/active_passive_list.json" />
-    <entry file="file://$PROJECT_DIR$/index.py">
+    <entry file="file://$PROJECT_DIR$/docs/Wikipedia:Recent_additions.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/active_passive_list.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/2019_KhashZahedan_suicide_bombing.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="-4785" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/1941.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="206" column="1" lean-forward="true" selection-start-line="206" selection-start-column="1" selection-end-line="206" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/twisted/internet/defer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="462" selection-start-line="462" selection-end-line="462" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5656">
+          <caret line="413" selection-start-line="413" selection-end-line="413" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/2019_KhashZahedan_suicide_bombing.txt" />
-    <entry file="file://$PROJECT_DIR$/docs/1941.txt" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/twisted/internet/defer.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/server.py" />
     <entry file="file://$PROJECT_DIR$/search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2795">
@@ -858,29 +918,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider.py">
+    <entry file="file://$PROJECT_DIR$/includes/all_data.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="105">
+          <caret line="7" column="118" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/style.css">
+    <entry file="file://$PROJECT_DIR$/includes/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="152" column="18" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/admin_panel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="239">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -890,57 +957,59 @@
             <element signature="n#style#0;n#form#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#form#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="6" selection-start-line="6" selection-end-line="8" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="212">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/all_data.html">
+    <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="194">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1551963091439" expanded="true" signature="65:799" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
+    <entry file="file://$PROJECT_DIR$/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="400" column="62" lean-forward="true" selection-start-line="400" selection-start-column="62" selection-end-line="400" selection-end-column="62" />
+        <state relative-caret-position="40">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/includes/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="289">
+          <caret line="163" column="18" selection-start-line="163" selection-start-column="18" selection-end-line="163" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="147" column="59" selection-start-line="147" selection-start-column="56" selection-end-line="147" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
