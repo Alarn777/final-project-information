@@ -9,7 +9,7 @@ from os import curdir, sep
 import os
 import search
 import acive_passive_files
-from index import do_index
+from index import do_index, load_from_source
 from spider import run_spider
 
 hostName = "localhost"
@@ -49,6 +49,23 @@ class myHandler(BaseHTTPRequestHandler):
         docs_path = os.path.abspath("./docs")
         data_path = os.path.abspath("./data")
 
+        # login page
+        if self.path.startswith("/login"):
+            password = self.path[16:]
+            if password == "1234":
+                self.path = "/admin"
+            else:
+                self.send_response(200)
+                self.send_header('Content-type', 'text/html')
+                self.end_headers()
+                f = open(curdir + sep + "/includes/login.html")
+                self.wfile.write(f.read().encode("utf-8"))
+                f.close()
+                if self.path[16:] != "":
+                    self.wfile.write('<h4 style="color: red"> Wrong password!</h4>'.encode("utf-8"))
+
+                return
+
         # admin panel
         if self.path.startswith("/admin"):
             self.send_response(200)
@@ -63,12 +80,12 @@ class myHandler(BaseHTTPRequestHandler):
             for file in list_of_files:
                 if list_of_files[file]:
                     var = '<p style="color:green">' + file + ' status: Active</p>'
-                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="deactivate+' + file + '"/>' + '<input type="submit" value="Deactivate" />' + '</form>'
+                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="deactivate+' + file + '"/>' + '<input class="button-my button2" type="submit" value="Deactivate" />' + '</form>'
 
                     self.wfile.write(deactivate.encode("utf-8"))
                 else:
                     var = '<p style="color:red">' + file + " status: Not Active</p>"
-                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="activate+' + file + '"/>' + '<input disabled type="submit" value="Deactivate" />' + '<input type="submit" value="Activate" />' + '</form>'
+                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="activate+' + file + '"/>' + '<input class="button-my button2" disabled type="submit" value="Deactivate" />' + '<input class="button-my button2" type="submit" value="Activate" />' + '</form>'
 
                     self.wfile.write(deactivate.encode("utf-8"))
             return
@@ -85,6 +102,18 @@ class myHandler(BaseHTTPRequestHandler):
                 do_index()
                 self.wfile.write('<p>Force index done</p>'.encode("utf-8"))
 
+            if command == 'load':
+                # load files from source
+                source_path = os.path.abspath("./source")
+
+                # Check what files in source
+                self.wfile.write('<h2>All files found in source folder:</h2>'.encode("utf-8"))
+                for doc_file in os.listdir(source_path):
+                    var = '<p>' + doc_file + '</p>'
+                    self.wfile.write(var.encode("utf-8"))
+                load_from_source()
+                self.wfile.write('<h2 style=" color:green">Loaded and reindexed!</h2>'.encode("utf-8"))
+
             if command == 'crawl':
                 run_spider()
                 crawl_path = os.path.abspath("./Spider/files")
@@ -92,14 +121,12 @@ class myHandler(BaseHTTPRequestHandler):
                 for doc_file in os.listdir(crawl_path):
                     var = '<p>' + doc_file + '</p>'
                     self.wfile.write(var.encode("utf-8"))
-                pass
 
             if command.startswith('deactivate'):
                 command = command[13:]
                 command = command.replace("+", " ")
                 acive_passive_files.ActivePassive.deactivate_file(command)
 
-                self.wfile.write('<p>Force index done</p>'.encode("utf-8"))
                 self.wfile.write('<p>Deactivated file</p>'.encode("utf-8"))
 
             if command.startswith('activate'):
@@ -107,7 +134,9 @@ class myHandler(BaseHTTPRequestHandler):
                 command = command.replace("+", " ")
                 acive_passive_files.ActivePassive.activate_file(command)
 
-            back = '<form style="float: right; margin: 10px" action="/admin">' + '<input style="margin: 10px" type="submit" value="Back to Admin panel" />' + '</form>'
+                self.wfile.write('<p>Activated file</p>'.encode("utf-8"))
+
+            back = '<form style="float: right; margin: 10px" action="/admin">' + '<input class="button-my button2" style="margin: 10px" type="submit" value="Back to Admin panel" />' + '</form>'
             self.wfile.write(back.encode("utf-8"))
             return
 
@@ -148,6 +177,7 @@ class myHandler(BaseHTTPRequestHandler):
 
             # results found
 
+
             # render page template
             f = open(curdir + sep + "/includes/index.html")
             self.wfile.write(f.read().encode("utf-8"))
@@ -157,12 +187,29 @@ class myHandler(BaseHTTPRequestHandler):
             first_line = ""
             second_line = ""
 
+            #check for inactive files
+
+            filename = "active_passive_list.json"
+
+            try:
+                f = open(curdir + "/data/" + filename, 'r')
+                if f:
+                    list_of_files = json.load(f)
+                    for doc_file in query_results:
+                        if list_of_files[doc_file[1]]:
+                            continue
+                        else:
+                            query_results.remove(doc_file)
+
+                f.close()
+            except IOError:
+                print("Open file error")
+
 
             # for file_name in query_results:
             listmy = {x for x in query_results[::-1]}
                 # try to correct indexed values
 
-            print(query_results.__len__())
             for i in reversed(query_results):
                 file_name = i[1]
                 try:

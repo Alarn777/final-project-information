@@ -30,18 +30,14 @@ class ArticleSpider(CrawlSpider):
     name = "article"
 
     def parse(self, response):
-        # content = response.xpath(".//div[@class='entry-content']/descendant::text()").extract()
-        # mw-content-text
-
         array_of_texts = response.xpath('//p/text()').extract()
         title = response.xpath('//body/div[@class="mw-body"]/h1/text()').extract()       # for wikipedia
-        # title = response.xpath('//title/text()')      # for else
         name = "_".join(map(str, title))
         name = name.replace(" ", "_")
         if is_ascii(name):
             if title:
                 try:
-                    f = open(curdir + "/Spider/files/" + name + '.txt', 'wb')
+                    f = open(curdir + "/source/" + name + '.txt', 'wb')
                     for line in array_of_texts:
                         f.write(line.encode("utf-8"))
                         f.write("\n".encode("utf-8"))

@@ -10,7 +10,7 @@
 <h1>Welcome to Admin panel</h1>
 
 <form style="float: right" action="/send">
-    <input style="margin: 10px" type="submit" value="Go to search" />
+    <input class="button-my button2" style="margin: 10px" type="submit" value="Go to search" />
 </form>
 <div style="clear: both"></div>
 <form style="float: right" action="/command">
@@ -18,7 +18,7 @@
            type="hidden"
            name="execute"
            value="forceindex" />
-    <input style="margin: 10px" type="submit"
+    <input class="button-my button2" style="margin: 10px" type="submit"
             value="Force Reindex">
 </form>
 
@@ -27,9 +27,20 @@
            type="hidden"
            name="execute"
            value="crawl" />
-    <input style="margin: 10px" type="submit"
+    <input class="button-my button2" style="margin: 10px" type="submit"
             value="Crawl for up to 100 files">
 </form>
+
+
+<form style="float: right" action="/command">
+    <input style="margin: 10px"
+           type="hidden"
+           name="execute"
+           value="load" />
+    <input class="button-my button2" style="margin: 10px" type="submit"
+            value="Load files from source">
+</form>
+
 
 
 <h2> All files:</h2>
