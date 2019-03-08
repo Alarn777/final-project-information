@@ -61,8 +61,12 @@ def process_query(query, dictionary, inverted_index):
     saved_queue = postfix_queue
 
     while postfix_queue:
+        result = []
         token = postfix_queue.popleft()
-        result = []  # the evaluated result at each stage
+        if token.endswith("*"):
+            result = wildcard(token, inverted_index)
+
+       # the evaluated result at each stage
         # if operand, add postings list for term to results stack
         if token != 'AND' and token != 'OR' and token != 'NOT':
             # default empty list if not in dictionary
@@ -184,6 +188,32 @@ returns the list of postfix tokens converted from the given infix expression
 params:
     infix_tokens: list of tokens in original query of infix notation
 """
+
+
+def wildcard(token, inverted_index):
+    data_path = os.path.abspath("./data")
+    token = token[:-1]
+    result = {''}
+    result.remove('')
+    try:
+        dictionary = os.path.join(data_path, "dictionary.txt")
+        f = open(dictionary, "r")
+        data = f.read()
+        data = data.split('\n')
+        for word in inverted_index.keys():
+            if word.startswith(token):
+                a = inverted_index.get(word)
+                fixed = {''}
+                fixed.remove('')
+
+                for val in a:
+                    fixed.add(os.path.basename(val))
+
+                result = result | fixed
+                print(result)
+    except IOError:
+        print("No dictionary found")
+    return result
 
 
 def shunting_yard(infix_tokens):

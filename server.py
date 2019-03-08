@@ -259,7 +259,7 @@ class myHandler(BaseHTTPRequestHandler):
                     print("Open file error")
 
                 var = '"' + file_name + '"'
-                to_wright = '<div class ="rendered_links_and_text">' + '<a class="rendered_links" target="_blank" href=' + var + ">" + file_name[
+                to_wright = '<div class ="rendered_links_and_text">' + '<a class="rendered_links" href=' + var + ">" + file_name[
                                                                                                                                        :-4] + "</a>"
                 self.wfile.write(to_wright.encode("utf-8"))
                 self.wfile.write(first_line.encode("utf-8"))
@@ -309,18 +309,6 @@ class myHandler(BaseHTTPRequestHandler):
                 sendReply = True
 
             if sendReply:
-                #     if finalFile:
-                #         f = open(curdir + sep + self.path)
-                #         for line in f:
-                #             for word in line:
-                #                 if word == self.search_array[0]:
-                #                     to_post_to_file = '<b>' + self.search_array[0] + '</b>'
-                #                     self.wfile.write(to_post_to_file.encode("utf-8"))
-                #                 else:
-                #                     self.wfile.write(word.encode("utf-8"))
-
-                #     self.wfile.write('<a style={padding: 100px;} href="/">Back to main page</a>'.encode("utf-8"))
-                #
                 # Open the static file requested and send it
                 self.send_response(200)
                 self.send_header('Content-type', mimetype)
@@ -360,6 +348,7 @@ class myHandler(BaseHTTPRequestHandler):
                     saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%22", '"')
 
                     query = query[34:]
+                    query = query.replace("*", '')
                     search_params = query.replace("%28", "(")
                     search_params = search_params.replace("%29", ")")
                     search_params = search_params.split("+")
