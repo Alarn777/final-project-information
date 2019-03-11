@@ -48,6 +48,15 @@ class myHandler(BaseHTTPRequestHandler):
         data_path = os.path.abspath("./data")
 
         # login page
+        if self.path.startswith("/info"):
+            self.send_response(200)
+            self.send_header('Content-type', 'text/html')
+            self.end_headers()
+            f = open(curdir + sep + "/includes/info.html")
+            self.wfile.write(f.read().encode("utf-8"))
+            self.wfile.write('</div>'.encode("utf-8"))
+
+        # login page
         if self.path.startswith("/login"):
             password = self.path[16:]
             if password == "1234":
@@ -173,18 +182,6 @@ class myHandler(BaseHTTPRequestHandler):
             self.end_headers()
 
             query_results, query_time = search.search(query)
-            # NO results found
-            if not query_results:
-                # render page template
-                f = open(curdir + sep + "/includes/index.html")
-                self.wfile.write(f.read().encode("utf-8"))
-
-                # render data
-                to_wright = '<h1>No Results for searched "' + unquote(query) + '"</h1>'
-                self.wfile.write(to_wright.encode("utf-8"))
-                return
-
-            # results found
 
             # render page template
             f = open(curdir + sep + "/includes/index.html")
@@ -201,6 +198,13 @@ class myHandler(BaseHTTPRequestHandler):
             var = '<span>Results: ' + str(query_results.__len__()) + '</span></div>'
             self.wfile.write(var.encode("utf-8"))
 
+            # NO results found
+
+            if not query_results:
+                # render data
+                to_wright = '<h1>No Results for searched "' + unquote(query) + '"</h1>'
+                self.wfile.write(to_wright.encode("utf-8"))
+                return
 
             first_line = ""
             second_line = ""
@@ -223,8 +227,7 @@ class myHandler(BaseHTTPRequestHandler):
             except IOError:
                 print("Open file error")
 
-            # for file_name in query_results:
-            listmy = {x for x in query_results[::-1]}
+            # results found
             # try to correct indexed values
 
             for i in reversed(query_results):
@@ -232,16 +235,11 @@ class myHandler(BaseHTTPRequestHandler):
                 try:
                     arr = []
                     print(docs_path + file_name)
-                    decoded_string = ""
                     with open(os.path.join(docs_path, file_name), 'rb') as f:
                         contents = f.read()
                         decoded_string = contents.decode("utf-8", "replace")
 
-                    # for_preview = open(docs_path + "/" + file_name, 'rb')
                     while arr.__len__() < 20:
-                        # contents = f.read()
-                        # decoded_string = contents.decode("utf-8", "replace")
-                        # line = for_preview.readline()
                         arr += self.cleaning2(decoded_string).split(" ")
                     count = 0
                     first_line = ""
@@ -263,7 +261,6 @@ class myHandler(BaseHTTPRequestHandler):
                                                                                                                                        :-4] + "</a>"
                 self.wfile.write(to_wright.encode("utf-8"))
                 self.wfile.write(first_line.encode("utf-8"))
-                # self.wfile.write(second_line.encode("wtf-8"))
 
             f.close()
             return
@@ -273,7 +270,6 @@ class myHandler(BaseHTTPRequestHandler):
             pass
 
         try:
-            # print(self.path)
             # Check the file extension required and
             # set the right mime type
 
@@ -282,7 +278,6 @@ class myHandler(BaseHTTPRequestHandler):
             icon = False
             if self.path.endswith(".txt"):
                 mimetype = 'text/html'
-                # self.path = "/docs" + self.path
                 sendReply = True
                 finalFile = True
 
@@ -325,7 +320,6 @@ class myHandler(BaseHTTPRequestHandler):
                     file_path = file_path.replace("%20", " ")
                     f = open(docs_path + sep + file_path, 'rb')
                     # print to page text
-                    decoded_string = ""
                     with open(docs_path + "/" + file_path, 'rb') as f:
                         contents = f.read()
                         decoded_string = contents.decode("utf-8", "replace")
@@ -346,6 +340,10 @@ class myHandler(BaseHTTPRequestHandler):
                     saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%28", "(")
                     saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%29", ")")
                     saved_query_for_back_to_search = saved_query_for_back_to_search.replace("%22", '"')
+
+                    is_wildcard = False
+                    if "*" in query:
+                        is_wildcard = True
 
                     query = query[34:]
                     query = query.replace("*", '')
@@ -386,7 +384,8 @@ class myHandler(BaseHTTPRequestHandler):
 
                     # file text
                     for word in words:
-                        if self.cleaning2(word) in cleaned_query_literals:
+                        if self.cleaning2(word) in cleaned_query_literals \
+                                or (is_wildcard and word.startswith(tuple(cleaned_query_literals))):
                             big_word = '<b><u style="background-color:yellow;">' + word + '</u></b>' + " "
                             self.wfile.write(big_word.encode("utf-8"))
                         else:
@@ -409,13 +408,11 @@ class myHandler(BaseHTTPRequestHandler):
 
 try:
     # Create a web server and define the handler to manage the
-    # incoming request
     server = HTTPServer((hostName, hostPort), myHandler)
 
+    #  perform index
     do_index()
 
-    # run_spider()                                              #spider and indexer
-    # index_file()
     # Wait forever for incoming http requests
     print('Started http server on port ', hostPort)
     server.serve_forever()

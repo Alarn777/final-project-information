@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="padding-bottom: 50px">
+<div class="container">
+<h1>Info</h1>
+
+<form style="float: right" action="/send">
+    <input class="button-my button2" style="margin: 10px" type="submit" value="Go to search" />
+</form>
+    <div style="clear: both"></div>
+    <h1>Search instructions</h1>
+    <p> System supports any length boolean expressions, but (AND OR NOT () ) must be uppercase</p>
+    <p> System supports wildcard expressions. "ra*" in search will result in "<u>ra</u>bbit,<u>ra</u>mp,<u>ra</u>ilway... <a href="/send?search=ra*">Example</a></p>
+    <p> Admin panel is protected by password and will allow: activating/deactivating any file, force reindexing, loading files from source</p>
+    <p> Index is done with .pickle python module witch implements inverted index</p>
+    <p> The UI is done with the localhost server running on python</p>
+    <p> System supports crawler (in admin panel "Crawl for 100 files" button) implemented with "scrappy", runs on <a href="https://wikipedia.org">wikipedia.org</a></p>
+    <p></p>
+    <p>Creators: Michael Rokitko & Yevgeny Alterman</p>
+
+<div class="footer">
+    <p>All rights reserved ®</p>
+</div>
+</body>
+</html>
