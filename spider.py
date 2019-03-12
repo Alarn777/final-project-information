@@ -117,7 +117,7 @@ runner = CrawlerRunner()
 def crawl():
     yield runner.crawl(MySpider)
     yield runner.crawl(ArticleSpider, start_urls=ALL_URLs)
-    reactor.stop()s
+    reactor.stop()
 
 
 def run_spider():
