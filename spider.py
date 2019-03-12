@@ -41,6 +41,7 @@ class ArticleSpider(CrawlSpider):
         array_of_texts = response.xpath('//p/text()').extract()
         title = response.xpath('//body/div[@class="mw-body"]/h1/text()').extract()       # for wikipedia
         name = "_".join(map(str, title))
+        name = name.replace(" ",'_')
         name = re.sub(r'\W+', '', name)
 
         self.save_to_disk(array_of_texts, name, title)
@@ -67,7 +68,7 @@ class MySpider(CrawlSpider):
     name = DOMAIN
     allowed_domains = [DOMAIN]
     start_urls = [
-        URL
+        URL+'/wiki/Special:Random'
     ]
 
     def parse(self, response):

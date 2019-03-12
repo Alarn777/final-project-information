@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 import re
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os import curdir, sep
@@ -64,7 +65,8 @@ class myHandler(BaseHTTPRequestHandler):
                 f.close()
                 if self.path[16:] != "":
                     self.wfile.write('<h4 style="color: red"> Wrong password!</h4>'.encode("utf-8"))
-
+                
+                self.wfile.write('</div>'.encode("utf-8"))
                 return
 
         # admin panel
@@ -77,8 +79,12 @@ class myHandler(BaseHTTPRequestHandler):
             f.close()
             f = open(data_path + "/active_passive_list.json", 'r')
             list_of_files = json.load(f)
- 
+            acitveCount='<span style="color:darkgreen;">Active : ' + str(sum(list_of_files[f] for f in list_of_files))+'</span>'
+            inacitveCount='<span style="color:darkred;">Inactive : ' + str(sum(not list_of_files[f] for f in list_of_files))+'</span>'
+            
+            self.wfile.write(('<p>Total '+str(len(list_of_files))+' files.   '+acitveCount+'   '+inacitveCount+'</p>').encode("utf-8"))
             self.wfile.write('<table class="table table-sm"><thead><tr><th>Status</th><th>Document Name</th><th class="text-right">Actions</th></tr></thead><tbody>'.encode("utf-8"))
+            
             for file in list_of_files:
                 button=''
                 rowClass=''
@@ -86,7 +92,6 @@ class myHandler(BaseHTTPRequestHandler):
 
                 if list_of_files[file]:
                     button = '<input type="hidden" name="execute" value="deactivate+' + file + '"/>' + '<input class="btn btn-sm btn-danger" type="submit" value="Deactivate" />' 
-                    rowClass="table-success"
                     status="Active"
                 else:
                     button ='<input type="hidden" name="execute" value="activate+' + file + '"/>' +  '<input class="btn btn-sm btn-success" type="submit" value="Activate" />'
@@ -102,22 +107,17 @@ class myHandler(BaseHTTPRequestHandler):
         # commands
         if self.path.startswith("/command"):
             command = self.path[17:]
-            
+
             if command.startswith('deactivate') or command.startswith('activate'):
                 if command.startswith('deactivate'):
                     command = command[13:]
                     command = command.replace("+", " ")
                     active_passive_files.ActivePassive.deactivate_file(command)
 
-                    #self.wfile.write('<p>Deactivated file</p>'.encode("utf-8"))
-
                 if command.startswith('activate'):
                     command = command[11:]
                     command = command.replace("+", " ")
                     active_passive_files.ActivePassive.activate_file(command)
-
-                    #self.wfile.write('<p>Activated file</p>'.encode("utf-8"))
-
 
                 self.send_response(301)
                 self.send_header('Location','http://localhost:9000/admin')
@@ -132,13 +132,15 @@ class myHandler(BaseHTTPRequestHandler):
 
             f = open(curdir + sep + "/includes/all_data.html")
             self.wfile.write(f.read().encode("utf-8"))
-
-            
+            back = '<a href="/admin" class="btn btn-link">Back to Admin panel</a>'
             if command == 'forceindex':
                 do_index()
-                self.wfile.write('<p>Force index done</p>'.encode("utf-8"))
+                self.wfile.write(('<div class="jumbotron"><h1 class="display-3">Force index done</h1><a href="/admin" class="btn btn-primary btn-lg">Back to Admin panel</a>').encode("utf-8"))
+                self.wfile.write('</div>'.encode("utf-8"))
+                return
 
             if command == 'load':
+                self.wfile.write(back.encode("utf-8"))
                 # load files from source
                 source_path = os.path.abspath("./source")
 
@@ -167,10 +169,14 @@ class myHandler(BaseHTTPRequestHandler):
 
                 self.wfile.write('</tbody></table>'.encode("utf-8"))
 
-            back = '<form style="float: right; margin: 10px" action="/admin">' + '<input class="button-my button2" style="margin: 10px" type="submit" value="Back to Admin panel" />' + '</form>'
+            
             self.wfile.write(back.encode("utf-8"))
             self.wfile.write('<div style="clear:both"></div>'.encode("utf-8"))
             self.wfile.write('</div>'.encode("utf-8"))
+            if command == 'crawl':
+                argv=sys.argv
+                argv.append('no_index')
+                os.execv(sys.executable, ['python3'] + argv)
             return
 
         if self.path.startswith("/send"):
@@ -216,6 +222,7 @@ class myHandler(BaseHTTPRequestHandler):
                 # render data
                 to_wright = '<h1>No Results for searched "' + unquote(query) + '"</h1>'
                 self.wfile.write(to_wright.encode("utf-8"))
+                self.wfile.write('</div>'.encode("utf-8"))
                 return
 
             first_line = ""
@@ -275,6 +282,7 @@ class myHandler(BaseHTTPRequestHandler):
                 self.wfile.write(first_line.encode("utf-8"))
 
             f.close()
+            self.wfile.write('</div>'.encode("utf-8"))
             return
 
         if self.path == "/":
@@ -412,6 +420,7 @@ class myHandler(BaseHTTPRequestHandler):
                 else:
                     f = open(curdir + sep + self.path)
                     self.wfile.write(f.read().encode("utf-8"))
+            self.wfile.write('</div>'.encode("utf-8"))
             return
 
         except IOError:
@@ -423,7 +432,8 @@ try:
     server = HTTPServer((hostName, hostPort), myHandler)
 
     #  perform index
-    do_index()
+    if len(sys.argv)<=1:
+        do_index()
 
     # Wait forever for incoming http requests
     print('Started http server on port ', hostPort)

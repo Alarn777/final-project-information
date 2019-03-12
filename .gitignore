@@ -2,13 +2,7 @@
 docs/*
 source/*
 __pycache__/*
-data/inverted_index.pickle
-data/active_passive_list.json
-data/dictionary.txt
-data/occurances_file.json
-data/dictionary.txt
-data/active_passive_list.json
-data/inverted_index.pickle
 data/occurances_file.json
 data/active_passive_list.json
+data/dictionary.txt
 data/inverted_index.pickle

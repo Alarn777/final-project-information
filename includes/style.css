@@ -21,7 +21,8 @@ form.example button {
   color: white;
   font-size: 17px;
   border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
+  border-left: none;
+  /* Prevent double borders */
   cursor: pointer;
 }
 
@@ -48,54 +49,48 @@ form.example::after {
   z-index: 1000;
 }
 
-
-h1 { text-align: center;
+h2,
+h1 {
   font-family: Papyrus, fantasy;
-  font-size: 24px;
+}
+
+h1 {
+  text-align: center;
   font-style: normal;
   font-variant: normal;
   font-weight: 700;
-  line-height: 26.4px;
+  margin: 15px;
+}
 
-    margin: 15px;
-} h3 {
-    /*font-family: Papyrus, fantasy;*/
-    font-size: 14px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    line-height: 15.4px; }
-/*p { font-family: Papyrus, fantasy; */
-  /*font-size: 14px;*/
-  /*font-style: normal;*/
-  /*font-variant: normal;*/
-  /*font-weight: 400;*/
-  /*line-height: 20px; }*/
+h3 {
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
 blockquote {
-  /*font-family: Papyrus, fantasy;*/
   font-size: 21px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
-  line-height: 30px; }
+  line-height: 30px;
+}
+
 pre {
-  /*font-family: Papyrus, fantasy;*/
-  font-size: 13px; font-style: normal;
-  font-variant: normal; font-weight: 400;
-  line-height: 18.5714px; }
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+}
 
 .rendered_links_and_text {
   margin-left: 20px;
   padding-top: 20px;
   display: block;
   position: relative;
-}
-
-
-.rendered_links {
-  /*margin-left: 20px;*/
-  /*padding-top: 20px;*/
-  /*display: block;*/
 }
 
 .rendered_links:link {
@@ -115,16 +110,16 @@ pre {
 }
 
 .st {
-    line-height: 1.4;
-    word-wrap: break-word;
-    color: grey;
-    font-size: 14px;
-    width: 400px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  color: grey;
+  font-size: 14px;
+  width: 400px;
 }
 
 
 .button-my {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 8px 16px;
@@ -133,13 +128,16 @@ pre {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
 }
-.table-btn{
+
+.table-btn {
   padding: 5px 10px;
 }
+
 .button2 {
   background-color: white;
   color: black;
@@ -151,16 +149,17 @@ pre {
   color: white;
 }
 
-.btn{
+.btn {
   border-radius: 0;
 }
 
-.data{
+.data {
   margin: 10px;
   text-decoration-color: lightgrey;
 
 }
-.data span{
-  font-size:12px;
+
+.data span {
+  font-size: 12px;
   line-height: 0.5;
 }

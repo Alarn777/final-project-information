@@ -5,43 +5,39 @@
     <meta charset="UTF-8">
     <title>Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body style="padding-bottom: 50px">
     <div class="container">
-    <h1>Welcome to Admin panel</h1>
+        <ul class="nav nav-justified">
+            <li class="nav-item navbar-brand">Admin Panel</li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="/send">Go to search</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="/command?execute=forceindex">Force Reindex</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="/command?execute=crawl">Crawl for up to 100 files</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="/command?execute=load">Load files from source</a>
+            </li>
+        </ul>
+        <h2 class="text-center" style="margin-top:30px;"> Documents Files</h2>
 
-    <form style="float: right" action="/send">
-        <input class="button-my button2" style="margin: 10px" type="submit" value="Go to search" />
-    </form>
-    
-    <form style="float: right" action="/command">
-        <input style="margin: 10px" type="hidden" name="execute" value="forceindex" />
-        <input class="button-my button2" style="margin: 10px" type="submit" value="Force Reindex">
-    </form>
-
-    <form style="float: right" action="/command">
-        <input style="margin: 10px" type="hidden" name="execute" value="crawl" />
-        <input class="button-my button2" style="margin: 10px" type="submit" value="Crawl for up to 100 files">
-    </form>
-
-
-    <form style="float: right" action="/command">
-        <input style="margin: 10px" type="hidden" name="execute" value="load" />
-        <input class="button-my button2" style="margin: 10px" type="submit" value="Load files from source">
-    </form>
-
-    <div style="clear: both"></div>
-
-    <h2> All files:</h2>
-
-    <div class="footer">
-        <p>All rights reserved ®</p>
-    </div>
+        <div class="footer">
+            <p>All rights reserved ®</p>
+        </div>
 </body>
 
 </html>
