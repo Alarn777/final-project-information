@@ -101,16 +101,39 @@ class myHandler(BaseHTTPRequestHandler):
 
         # commands
         if self.path.startswith("/command"):
+            command = self.path[17:]
+            
+            if command.startswith('deactivate') or command.startswith('activate'):
+                if command.startswith('deactivate'):
+                    command = command[13:]
+                    command = command.replace("+", " ")
+                    active_passive_files.ActivePassive.deactivate_file(command)
+
+                    #self.wfile.write('<p>Deactivated file</p>'.encode("utf-8"))
+
+                if command.startswith('activate'):
+                    command = command[11:]
+                    command = command.replace("+", " ")
+                    active_passive_files.ActivePassive.activate_file(command)
+
+                    #self.wfile.write('<p>Activated file</p>'.encode("utf-8"))
+
+
+                self.send_response(301)
+                self.send_header('Location','http://localhost:9000/admin')
+                self.end_headers()
+                return
+            
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-
+                
             # load template
 
             f = open(curdir + sep + "/includes/all_data.html")
             self.wfile.write(f.read().encode("utf-8"))
 
-            command = self.path[17:]
+            
             if command == 'forceindex':
                 do_index()
                 self.wfile.write('<p>Force index done</p>'.encode("utf-8"))
@@ -143,20 +166,6 @@ class myHandler(BaseHTTPRequestHandler):
                     self.wfile.write(('<tr><td>' + doc_file + '</td></tr>').encode("utf-8"))
 
                 self.wfile.write('</tbody></table>'.encode("utf-8"))
-
-            if command.startswith('deactivate'):
-                command = command[13:]
-                command = command.replace("+", " ")
-                active_passive_files.ActivePassive.deactivate_file(command)
-
-                self.wfile.write('<p>Deactivated file</p>'.encode("utf-8"))
-
-            if command.startswith('activate'):
-                command = command[11:]
-                command = command.replace("+", " ")
-                active_passive_files.ActivePassive.activate_file(command)
-
-                self.wfile.write('<p>Activated file</p>'.encode("utf-8"))
 
             back = '<form style="float: right; margin: 10px" action="/admin">' + '<input class="button-my button2" style="margin: 10px" type="submit" value="Back to Admin panel" />' + '</form>'
             self.wfile.write(back.encode("utf-8"))
