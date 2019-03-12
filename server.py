@@ -119,14 +119,18 @@ class myHandler(BaseHTTPRequestHandler):
 
                 # Check what files in source
                 self.wfile.write('<h2>All files found in source folder:</h2>'.encode("utf-8"))
+                self.wfile.write('<ul class="list-group">'.encode("utf-8"))
                 for doc_file in os.listdir(source_path):
                     if doc_file.startswith("."):
                         continue
 
-                    var = '<p>' + doc_file + '</p>'
+                    var = '<li class="list-group-item">' + doc_file + '</li>'
                     self.wfile.write(var.encode("utf-8"))
+
+                self.wfile.write("</ul>".encode("utf-8"))
                 load_from_source()
                 self.wfile.write('<h2 style=" color:green">Loaded and reindexed!</h2>'.encode("utf-8"))
+                
 
             if command == 'crawl':
                 run_spider()

@@ -10,6 +10,7 @@ from scrapy.exceptions import CloseSpider
 from scrapy.selector import Selector
 from scrapy.spiders import CrawlSpider
 from twisted.internet import reactor, defer
+import re
 
 DOMAIN = 'en.wikipedia.org'
 # DOMAIN = "scholar.google.com"
@@ -40,12 +41,12 @@ class ArticleSpider(CrawlSpider):
         array_of_texts = response.xpath('//p/text()').extract()
         title = response.xpath('//body/div[@class="mw-body"]/h1/text()').extract()       # for wikipedia
         name = "_".join(map(str, title))
-        name = name.replace(" ", "_")
-        name = name.replace("/", "_")
-        validFilenameChars = "-_.() %s%s" % (string.ascii_letters, string.digits)
-        cleanedFilename = unicodedata.normalize('NFKD', name).encode('ASCII', 'ignore')
-        name = cleanedFilename.decode("utf-8")
+        name = re.sub(r'\W+', '', name)
 
+        self.save_to_disk(array_of_texts, name, title)
+
+    @staticmethod
+    def save_to_disk(array_of_texts, name, title):
         if is_ascii(name):
             if title:
                 try:
@@ -116,7 +117,7 @@ runner = CrawlerRunner()
 def crawl():
     yield runner.crawl(MySpider)
     yield runner.crawl(ArticleSpider, start_urls=ALL_URLs)
-    reactor.stop()
+    reactor.stop()s
 
 
 def run_spider():
