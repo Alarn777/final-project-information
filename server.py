@@ -33,12 +33,6 @@ class myHandler(BaseHTTPRequestHandler):
     # Handler for the POST requests
     def do_POST(self):
         if self.path == "/send":
-            # with open(curdir + sep + filename, 'r') as f:
-            #     datastore = json.load(f)
-            # if "words" in datastore:
-            #     if "Carol" in datastore["words"]:
-            #         print(datastore["words"]["Carol"])
-
             return
 
     # Handler for the GET requests
@@ -83,18 +77,26 @@ class myHandler(BaseHTTPRequestHandler):
             f.close()
             f = open(data_path + "/active_passive_list.json", 'r')
             list_of_files = json.load(f)
-
+ 
+            self.wfile.write('<table class="table table-sm"><thead><tr><th>Status</th><th>Document Name</th><th class="text-right">Actions</th></tr></thead><tbody>'.encode("utf-8"))
             for file in list_of_files:
+                button=''
+                rowClass=''
+                status=''
+
                 if list_of_files[file]:
-                    var = '<span style="color:green">' + file + ' status: Active</span>'
-                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="deactivate+' + file + '"/>' + '<input class="button-my button2 table-btn" type="submit" value="Deactivate" />' + '</form>'
-
-                    self.wfile.write(deactivate.encode("utf-8"))
+                    button = '<input type="hidden" name="execute" value="deactivate+' + file + '"/>' + '<input class="btn btn-sm btn-danger" type="submit" value="Deactivate" />' 
+                    rowClass="table-success"
+                    status="Active"
                 else:
-                    var = '<span style="color:red">' + file + " status: Not Active</span>"
-                    deactivate = '<form style="border: 1px solid black; padding: 5px;" action="/command">' + var + ' <input type="hidden" name="execute" value="activate+' + file + '"/>' + '<input class="button-my button2  table-btn" disabled type="submit" value="Deactivate" />' + '<input class="button-my button2  table-btn" type="submit" value="Activate" />' + '</form>'
+                    button ='<input type="hidden" name="execute" value="activate+' + file + '"/>' +  '<input class="btn btn-sm btn-success" type="submit" value="Activate" />'
+                    rowClass="table-danger"
+                    status="Inactive"
 
-                    self.wfile.write(deactivate.encode("utf-8"))
+                self.wfile.write(('<tr class="'+rowClass+'"><td>'+status+'</td><td>'+file+'</td><td class="text-right"><form action="/command">'+button+'</form></td>'+'</tr>').encode("utf-8"))
+            
+            self.wfile.write('</tbody></table>'.encode("utf-8"))
+            self.wfile.write('</div>'.encode("utf-8"))
             return
 
         # commands
@@ -119,15 +121,14 @@ class myHandler(BaseHTTPRequestHandler):
 
                 # Check what files in source
                 self.wfile.write('<h2>All files found in source folder:</h2>'.encode("utf-8"))
-                self.wfile.write('<ul class="list-group">'.encode("utf-8"))
+                self.wfile.write('<table class="table table-sm"><tbody>'.encode("utf-8"))
                 for doc_file in os.listdir(source_path):
                     if doc_file.startswith("."):
                         continue
 
-                    var = '<li class="list-group-item">' + doc_file + '</li>'
-                    self.wfile.write(var.encode("utf-8"))
+                    self.wfile.write(('<tr><td>' + doc_file + '</td></tr>').encode("utf-8"))
 
-                self.wfile.write("</ul>".encode("utf-8"))
+                self.wfile.write('</tbody></table>'.encode("utf-8"))
                 load_from_source()
                 self.wfile.write('<h2 style=" color:green">Loaded and reindexed!</h2>'.encode("utf-8"))
                 
@@ -136,11 +137,12 @@ class myHandler(BaseHTTPRequestHandler):
                 run_spider()
                 crawl_path = os.path.abspath("./source")
                 self.wfile.write('<h2>All files fetched by Crawler</h2>'.encode("utf-8"))
+                self.wfile.write('<table class="table table-sm"><tbody>'.encode("utf-8"))
                 for doc_file in os.listdir(crawl_path):
-                    if doc_file.startswith("."):
-                        continue
-                    var = '<p>' + doc_file + '</p>'
-                    self.wfile.write(var.encode("utf-8"))
+                    if doc_file.startswith("."): continue
+                    self.wfile.write(('<tr><td>' + doc_file + '</td></tr>').encode("utf-8"))
+
+                self.wfile.write('</tbody></table>'.encode("utf-8"))
 
             if command.startswith('deactivate'):
                 command = command[13:]
@@ -159,24 +161,21 @@ class myHandler(BaseHTTPRequestHandler):
             back = '<form style="float: right; margin: 10px" action="/admin">' + '<input class="button-my button2" style="margin: 10px" type="submit" value="Back to Admin panel" />' + '</form>'
             self.wfile.write(back.encode("utf-8"))
             self.wfile.write('<div style="clear:both"></div>'.encode("utf-8"))
-
+            self.wfile.write('</div>'.encode("utf-8"))
             return
 
         if self.path.startswith("/send"):
-            # self.path = "/includes/index.html"
-
             search_params = self.path
-
-            # self.path = "/includes/index.html"
-
             search_params = search_params.replace("%28", "(")
             search_params = search_params.replace("%29", ")")
             search_params = search_params[13:]
             search_params = search_params.split("+")
             query = ""
+            
             for val in search_params:
                 if val != '':
                     query = query + val + " "
+            
             query = query[:-1]
 
             # response implementation

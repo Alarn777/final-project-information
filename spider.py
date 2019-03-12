@@ -128,6 +128,3 @@ def run_spider():
 # the script will block here until the last crawl call is finished
 def is_ascii(s):
     return all(ord(c) < 128 for c in s)
-
-
-
